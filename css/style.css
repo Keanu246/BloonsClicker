@@ -19,6 +19,7 @@ body {
 .buyables {
   background: #fdf6e3;
   height: 50%;
+  overflow: auto;
 }
 
 .clicker {
@@ -38,12 +39,12 @@ body {
 }
 
 .clicker__button {
-  background-image: url("https://vignette.wikia.nocookie.net/b__/images/f/f2/BTD6Red.png/revision/latest?cb=20180809060915&path-prefix=bloons");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e4/Keyboard-icon_Wikipedians.svg");
   background-size: cover;
-  height: 100px;
-  width: 200px;
+  height: 150px;
+  width: 250px;
 
-  background-color: #ffffff;
+  background-color: #fdf6e3;
   border: none;
   outline: none;
 }
@@ -56,4 +57,39 @@ body {
   border-radius: 8px;
   width: 600px;
   height: 75px;
+}
+
+.buyable__amount {
+  align-self: center;
+  font-size: 24px;
+}
+
+.buyable__text {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.buyable__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.buyable__title-text {
+  font-weight: bold;
+}
+
+.buyable__effect {
+  font-size: 12px;
+}
+
+.buyable__button {
+  align-self: center;
+  background: none;
+  border: 2px solid #859900;
+  border-radius: 8px;
+  color: #859900;
+  font-size: 20px;
+  height: 30px;
+  width: 80px;
 }
