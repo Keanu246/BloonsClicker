@@ -1,26 +1,39 @@
-<html>
+ <html>
   <head>
     <title> Bloons Clicker </title>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div>
-      Bloons: 0
-      <div>
-        <button> Pop Bloon </button>
+    <div class="clicker">
+      <div class="clicker__button-area">
+        <div>Bloons: 0</div>
+        <button class="clicker__button"> </button>
       </div>
     </div>
-    <div>
-      Number of Cursors: 0
-      Price: 10
-      <div>
-        <button> Buy Cursor </button>
+    <div class="buyables">
+      <div class="buyable">
+        <div class="buyable__amount"> 0 </div>
+        <div class="buyable__text">
+          <div class="buyable__title">
+            <span class="buyable__title-text"> Cursor </span>
+            <span class="buyable__title-price"> 10 Bloons </span>
+          </div>
+          <div class="buyable__description"> Cursors help tap Bloons to pop. To deflate them.</div>
+          <div class="buyable__effect"> Pops 1 bloon per click </div>
+        </div>
+        <button class="buyable__button"> Buy </button>
       </div>
-    </div>
-    <div>
-      Number of Dart Monkeys: 0
-      Price: 100
-      <div>
-        <button> Buy Dart Monkey </button>
+      <div class="buyable">
+        <div class="buyable__amount"> 0 </div>
+        <div class="buyable__text">
+          <div class="buyable__title">
+            <span class="buyable__title-text"> Dart Monkey </span>
+            <span class="buyable__title-price"> 100 Bloons </span>
+          </div>
+          <div class="buyable__description"> The single monkey that throws darts. Helps pop Bloons in all BTD games. </div>
+          <div class="buyable__effect"> Pops 1 bloon per second </div>
+        </div>
+        <button class="buyable__button"> Buy </button>
       </div>
     </div>
   </body>
