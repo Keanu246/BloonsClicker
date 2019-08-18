@@ -1,0 +1,59 @@
+ html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Luckiest Guy";
+}
+
+.clicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #002b35;
+  height: 50%;
+}
+
+.buyables {
+  background: #fdf6e3;
+  height: 50%;
+}
+
+.clicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clicker__button-area {
+  font-size: 24px;
+  text-align: center;
+
+  background: #fdf6e3;
+  border-radius: 8px;
+  opacity: .8;
+  padding: 30px;
+}
+
+.clicker__button {
+  background-image: url("https://vignette.wikia.nocookie.net/b__/images/f/f2/BTD6Red.png/revision/latest?cb=20180809060915&path-prefix=bloons");
+  background-size: cover;
+  height: 150px;
+  width: 250px;
+
+  background-color: #fdf6e3;
+  border: none;
+  outline: none;
+}
+
+.buyable {
+  display: flex;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 2px solid #002b36;
+  border-radius: 8px;
+  width: 600px;
+  height: 75px;
+}
