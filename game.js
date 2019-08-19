@@ -13,3 +13,8 @@ function Tick() {
 	money++;
 	document.getElementById("money").innerHTML = money;
 }
+
+var Building1Name = "Dart Monkey";
+var Building1Cost = 10;
+var Building1PerSec = 1;
+var Building1Qty = 0;
