@@ -1,46 +1,37 @@
 <html>
 <head>
-<title>Bloons Clicker</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="js/game.js"></script>
+<title>Basic Incremental Game</title>
+<link rel="stylesheet" type="text/css" href="css/Incremental.css">
+<script src="js/Incremental.js"></script>
 </head>
 
 <body>
 	<div id="page">
 		<div id="header">
 			<div id="game-title">
-				Bloons Clicker
+				Basic Incremental Game
 			</div>
 		</div>
 	
 	<div id="content">
 		<div id="stats" class="block">
-			<div class="label">Bloons</div>
-                        <div id="money" class="label">0</div>
+			<div class="label">Money:</div>
+			<div id="money" class="label">0</div>
 		</div>
 	
 		<div id="clickables" class="block">
-			<input type="button" value="Pop!" onclick="GatherMoney(1);">
+			<input type="button" value="Click Me!" onclick="GatherMoney();">
 		</div>
 	
 		<div id="buildings" class="block">
 			<div id="Building1">
-  <input type="button" value="Dart Monkey" onclick="BuyDartMonkey();">
-  <div id="Building1Cost">
-    10
-  </div>
-  <div id="Building1PerSec">
-    1
-  </div>
-  <div id="Building1Qty">
-    0
-  </div>
-</div>
-		</div>
-		
-		<div id="upgrades" class="block">
-			This is where our upgrades will go!
-		</div>
-	</div>
-
-</body>
+				<input type="button" value="Lemonade Stand" onclick="Build(0);">
+				<div>
+					<div class="label">Cost:</div>
+					<div id="Building1Cost" class="label">10</div>
+				</div>
+				
+				<div>
+					<div class="label">Per Sec:</div>
+					<div id="Building1PerSec" class="label">1</div>
+				</div>
