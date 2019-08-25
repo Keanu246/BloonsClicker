@@ -1,10 +1,39 @@
-<!DOCTYPE html>
 <html>
-<head>
-<title>Bloons Clicker</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="game.js"></script>
-</head>
-
-<body>
-	
+  <head>
+    <title> Bloons Clicker </title>
+  </head>
+  <body>
+    <div class="clicker">
+      <div class="clicker__button-area">
+        <div> Bloons: 0 </div>
+        <button class="clicker__button"></button>
+      </div>
+    </div>
+    <div class="buyables">
+      <div class="buyable">
+        <div class="buyable__amount"> 0 </div>
+        <div class="buyable__text">
+          <div class="buyable__title">
+            <span class="buyable__title-text"> Power Click </span>
+            <span class="buyable__title-price"> 10 Bloons </span>
+          </div>
+          <div class="buyable__description"> A power click will deflate bloons quick! </div>
+          <div class="buyable__effect"> Adds 1 bloon per click </div>
+        </div>
+        <button class="buyable__button"> Buy </button>
+      </div>
+      <div class="buyable">
+        <div class="buyable__amount"> 0 </div>
+        <div class="buyable__text">
+          <div class="buyable__title">
+            <span class="buyable__title-text"> Dart Monkey </span>
+            <span class="buyable__title-price"> 100 Bloons </span>
+          </div>
+          <div class="buyable__description"> A single monkey that throws darts at the Bloons. </div>
+          <div class="buyable__effect"> Pops 1 bloon per second </div>
+        </div>
+        <button class="buyable__button"> Buy </button>
+      </div>
+    </div>
+  </body>
+</html>
