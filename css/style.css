@@ -38,7 +38,7 @@ body {
 }
 
 .clicker__button {
-  background-image: url("assets/Btd6monkey.png");
+  background-image: url("/assets/Btd6monkey.png");
   background-size: cover;
   height: 100px;
   width: 200px;
