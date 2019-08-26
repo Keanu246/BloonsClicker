@@ -1,49 +1,40 @@
-html {
-  height: 100%;
+div.tabs {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 100%;
 }
 
-body {
-  margin: 0;
-  height: 100%;
-  font-family: "Open Sans";
+div.tabs button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
-.clicker {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #002b35;
-  height: 50%;
+div.tabs button:hover {
+    background-color: #ddd;
 }
 
-.buyables {
-  background: #fdf6e3;
-  height: 50%;
+div.tabs button:active {
+    background-color: #ccc;
 }
 
-.clicker {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.tabcontent {
+    display: none;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 100%;
 }
-
-.clicker__button-area {
-  font-size: 24px;
-  text-align: center;
-
-  background: #fdf6e3;
-  border-radius: 8px;
-  opacity: .8;
-  padding: 30px;
+/*
+.maincontent {
+    font-size: 20px;
 }
-
-.clicker__button {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e4/Keyboard-icon_Wikipedians.svg"));
-  background-size: cover;
-  height: 310px;
-  width: 310px;
-
-  background-color: #fdf6e3;
-  border: none;
-  outline: none;
+.dartpower {
+    display: none;
 }
