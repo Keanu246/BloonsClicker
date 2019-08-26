@@ -32,7 +32,7 @@ var tackBPS = 5;
 var sniperPrice = 1000;
 var sniperTotal = 0;
 var sniperBPS = 20;
-var davidredbullUpgrade = false
+var dartpowerUpgrade = false
 
 function loadSave() { //loads the saved values from local storage
 	if(localStorage.bloons) { //checks for a local save
@@ -61,49 +61,49 @@ function loadDarts() { //updates the HTML elements related to David affter loadi
 	document.getElementById("dartProduce").innerHTML = 'Writing ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second';
 }
 
-function loadIzzys() { //updates the HTML elements related to izzy affter loading
-	savedIzzys = localStorage.izzys;
-	izzyTotal = parseInt(savedIzzys);
-	izzyPrice = Math.ceil(100 * 1.15**izzyTotal);
-	document.getElementById("izzy").innerHTML = 'Buy an izzy for ' + izzyPrice + ' Lines of code';
-	document.getElementById("izzyAmmount").innerHTML = 'you have ' + izzyTotal + ' Izzys';
-	document.getElementById("izzyProduce").innerHTML = 'Writing ' + (izzyLPS * izzyTotal).toFixed(1) + ' lines of code per second';
+function loadTacks() { //updates the HTML elements related to izzy affter loading
+	savedTacks = localStorage.tacks;
+	tackTotal = parseInt(savedTacks);
+	tackPrice = Math.ceil(250 * 1.15**tackTotal);
+	document.getElementById("tackShooter").innerHTML = 'Buy a Tack Shooter for ' + tackPrice + ' Bloons';
+	document.getElementById("tackAmmount").innerHTML = 'you have ' + tackTotal + ' Tack Shooters';
+	document.getElementById("tackProduce").innerHTML = 'Pops ' + (tackBPS * tackTotal).toFixed(1) + ' bloons per second';
 }
 
-function loadNicoles() {
-	savedNicoles = localStorage.nicoles;
-	nicoleTotal = parseInt(savedNicoles);
-	nicolePrice = Math.ceil(1100 * 1.15**nicoleTotal);
-	document.getElementById("nicole").innerHTML = 'Buy a Nicole for ' + nicolePrice + ' Lines of code';
-	document.getElementById("nicoleAmmount").innerHTML = 'you have ' + nicoleTotal + ' Nicoles';
-	document.getElementById("nicoleProduce").innerHTML = 'Writing ' + (nicoleLPS * nicoleTotal).toFixed(1) + ' Lines of code per second';
+function loadSnipers() {
+	savedSnipers = localStorage.snipers;
+	sniperTotal = parseInt(savedSnipers);
+	sniperPrice = Math.ceil(1000 * 1.15**sniperTotal);
+	document.getElementById("sniperMonkey").innerHTML = 'Buy a Sniper Monkey for ' + sniperPrice + ' Bloons';
+	document.getElementById("sniperAmmount").innerHTML = 'you have ' + sniperTotal + ' Sniper Monkeys';
+	document.getElementById("sniperProduce").innerHTML = 'Pops ' + (sniperBPS * sniperTotal).toFixed(1) + ' bloons per second';
 }
 
-function addPoints() { //function for clicking
-	points = points + clickStr;
-	//console.log(getCookie("points"))l;
-	document.getElementById("points").innerHTML = points.toFixed(1) + ' Lines of code';
+function addBloons() { //function for clicking
+	bloons = bloons + clickStr;
+	//console.log(getCookie("bloons"))l;
+	document.getElementById("bloons").innerHTML = points.toFixed(1) + ' Bloons';
 }
 
-function buyDavid() { //function for buying more davids
-	if(points >= davidPrice) {
-		points = points - davidPrice;
-		davidTotal = davidTotal + 1;
-		davidPrice = Math.ceil(10 * 1.15**davidTotal);
-		document.getElementById("david").innerHTML = 'Buy a David for ' + davidPrice + ' Lines of code';
-		document.getElementById("davidAmmount").innerHTML = 'you have ' + davidTotal + ' Davids';
-		document.getElementById("davidProduce").innerHTML = 'Writing ' + (davidLPS * davidTotal).toFixed(1) + ' lines of code per second';
+function buyDart() { //function for buying more davids
+	if(bloons >= dartPrice) {
+		bloons = bloons - dartPrice;
+		dartTotal = dartTotal + 1;
+		dartPrice = Math.ceil(50 * 1.15**dartTotal);
+		document.getElementById("dartMonkey").innerHTML = 'Buy a Dart Monkey for ' + dartPrice + ' Bloons';
+		document.getElementById("dartAmmount").innerHTML = 'you have ' + dartTotal + ' Dart Monkeys';
+		document.getElementById("dartProduce").innerHTML = 'Writing ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second';
 	}
 }
 
-function buyIzzy() { //Function for buying more izzys
-	if(points >= izzyPrice) {
-		points = points - izzyPrice;
-		izzyTotal = izzyTotal + 1;
-		izzyPrice = Math.ceil(100 * 1.15**izzyTotal);
-		document.getElementById("izzy").innerHTML = 'Buy an izzy for ' + izzyPrice + ' Lines of code';
-		document.getElementById("izzyAmmount").innerHTML = 'you have ' + izzyTotal + ' Izzys';
-		document.getElementById("izzyProduce").innerHTML = 'Writing ' + (izzyLPS * izzyTotal).toFixed(1) + ' lines of code per second';
+function buyTack() { //Function for buying more izzys
+	if(bloons >= tackPrice) {
+		bloons = bloons - tackPrice;
+		tackTotal = tackTotal + 1;
+		tackPrice = Math.ceil(250 * 1.15**tackTotal);
+		document.getElementById("tackShooter").innerHTML = 'Buy a Tack Shooter for ' + tackPrice + ' Bloons';
+		document.getElementById("tackAmmount").innerHTML = 'you have ' + tackTotal + ' Tack Shooters';
+		document.getElementById("tackProduce").innerHTML = 'Pops ' + (tackBPS * tackTotal).toFixed(1) + ' bloons per second';
 	}
 }
 
