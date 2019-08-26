@@ -12,8 +12,18 @@ var tackBPS = 5;
 var sniperBPS = 25;
 var boomerangBPS = 150;
 
-function addBloons() { //function for clicking
+function addBloons(){ //function for clicking
 	bloons = bloons + clickStr;
 	//console.log(getCookie("bloons"))l;
 	document.getElementById("bloons").innerHTML = points.toFixed(1) + ' Bloons';
 }
+
+function buyDart(){
+  if(bloons >= dartPrice) {
+      points = points - dartPrice;
+        dartTotal = dartTotal + 1;
+        dartPrice = Math.ceil(100 * 1.15**dartTotal);
+	document.getElementById("dartMonkey").innerHTML = 'Buy a Dart Monkey for ' + dartPrice + ' Bloons';
+	document.getElementById("dartAmmount").innerHTML = 'you have ' + dartTotal + ' Dart Monkeys';
+	document.getElementById("dartProduce").innerHTML = 'Pops ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second';
+
