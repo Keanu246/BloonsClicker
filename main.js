@@ -12,3 +12,8 @@ var tackBPS = 5;
 var sniperBPS = 25;
 var boomerangBPS = 150;
 
+function addBloons() { //function for clicking
+	bloons = bloons + clickStr;
+	//console.log(getCookie("bloons"))l;
+	document.getElementById("bloons").innerHTML = points.toFixed(1) + ' Bloons';
+}
