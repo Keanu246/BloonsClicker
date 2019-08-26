@@ -36,8 +36,8 @@ var dartpowerUpgrade = false
 
 function loadSave() { //loads the saved values from local storage
 	if(localStorage.bloons) { //checks for a local save
-		savedPoints = localStorage.bloons;
-		points = parseInt(savedBloons); clickStr = parseInt(localStorage.clickStr); clickCost = parseInt(localStorage.clickCost);
+		savedBloons = localStorage.bloons;
+		bloons = parseInt(savedBloons); clickStr = parseInt(localStorage.clickStr); clickCost = parseInt(localStorage.clickCost);
 		loadDarts();
 		loadTacks();
 		loadSnipers();
