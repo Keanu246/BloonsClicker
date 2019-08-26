@@ -54,7 +54,7 @@ function loadDarts() { //updates the HTML elements related to Dart Monkey affter
 	dartpowerUpgrade = (localStorage.dartpower == 'true');
 	console.log(dartpowerUpgrade)
 	if(dartpowerUpgrade){
-		dartBPS = dartBPS * 3;
+		dartBPS = dartBPS * 2;
 	}
 	document.getElementById("dartMonkey").innerHTML = 'Buy a Dart Monkey for ' + dartPrice + ' Bloons';
 	document.getElementById("dartAmmount").innerHTML = 'you have ' + dartTotal + ' Dart Monkeys';
@@ -130,13 +130,13 @@ window.setInterval(function() {
 	document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
 }, refreshRateVar);
 
-window.setInterval(function() { //Saves game data every 15 seconds
+window.setInterval(function() { //Saves game data every 60 seconds
 	localStorage.setItem("bloonpops", bloons);
 	localStorage.setItem("dartMonkey", dartTotal);
 	localStorage.setItem("tackShooter", tackTotal);
 	localStorage.setItem("sniperMonkey", sniperTotal);
 	console.log("Game Saved");
-}, 15000);
+}, 60000);
 
 
 /*
