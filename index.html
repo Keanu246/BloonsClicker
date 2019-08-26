@@ -1,84 +1,61 @@
 <html>
-  <head>
-    <title> Bloons Clicker </title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="main.js"></script>
-  </head>
-  <body>
-    <div class="tabs">
-      <button class="tablinks" onclick="openTab(event, 'Main')">
-        <p>Main</p>
-	</button>
-      <button class="tablinks" onclick="openTab(event, 'Upgrades')">
-	<p>Upgrades</p>
-	</button>
-      <button class="tablinks" onclick="openTab(event, 'Settings')">
-	<p>Settings</p>
-	</button>
-    </div>
-  <div id="Main" class="tabcontent">
-    <div class="clicker">
-      <div class="clicker__button-area">
-        <div> Bloons: 100 </div>
-        <button class="clicker__button"></button>
-      </div>
-    </div>
-    <div class="buyables">
-      <div class="buyable">
-        <div class="buyable__amount"> 0 </div>
-        <div class="buyable__text">
-          <div class="buyable__title">
-            <span class="buyable__title-text"> Power Click </span>
-            <span class="buyable__title-price"> 10 Bloons </span>
-          </div>
-          <div class="buyable__description"> A power click will deflate bloons quick! </div>
-          <div class="buyable__effect"> Adds 1 bloon per click </div>
-        </div>
-        <button class="buyable__button"> Buy </button>
-      </div>
-      <div class="buyable">
-        <div class="buyable__amount"> 0 </div>
-        <div class="buyable__text">
-          <div class="buyable__title">
-            <span class="buyable__title-text"> Dart Monkey </span>
-            <span class="buyable__title-price"> 100 Bloons </span>
-          </div>
-          <div class="buyable__description"> A single monkey that throws darts at the Bloons. </div>
-          <div class="buyable__effect"> Pops 1 bloon per second </div>
-        </div>
-	<div class="buyable">
-          <div class="buyable__amount"> 0 </div>
-          <div class="buyable__text">
-            <div class="buyable__title">
-              <span class="buyable__title-text"> Tack Shooter </span>
-              <span class="buyable__title-price"> 500 Bloons </span>
-          </div>
-          <div class="buyable__description"> A machinery, that shoots 8 tacks at Bloons. </div>
-          <div class="buyable__effect"> Pops 5 bloons per second </div>
-        </div>
-	<div class="buyable">
-          <div class="buyable__amount"> 0 </div>
-          <div class="buyable__text">
-            <div class="buyable__title">
-              <span class="buyable__title-text"> Sniper Monkey </span>
-              <span class="buyable__title-price"> 6000 Bloons </span>
-          </div>
-          <div class="buyable__description"> Monkey armed with high-tech rifle to pop Bloons. </div>
-          <div class="buyable__effect"> Pops 25 bloons per second </div>
-        </div>
-	<div class="buyable">
-          <div class="buyable__amount"> 0 </div>
-          <div class="buyable__text">
-            <div class="buyable__title">
-              <span class="buyable__title-text"> Boomerang Monkey </span>
-              <span class="buyable__title-price"> 80000 Bloons </span>
-          </div>
-          <div class="buyable__description"> This monkey has a piercing boomerang, which pops multiple Bloons. </div>
-          <div class="buyable__effect"> Pops 150 bloons per second </div>
-        </div>
-        <button class="buyable__button"> Buy </button>
-      </div>
-    </div>
-  </div>
- </body>
+	<head>
+		<script src="main.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>CodeDay Clicker</title>
+	</head>
+	<body onload="loadSave()">
+		<div class="tabs">
+			<button class="tablinks" onclick="openTab(event, 'Main')">
+			        <p>Main</p>
+			</button>
+			<button class="tablinks" onclick="openTab(event, 'Upgrades');checkUpgrades()">
+				<p>Upgrades</p>
+			</button>
+			<button class="tablinks" onclick="openTab(event, 'Settings')">
+				<p>Settings</p>
+			</button>
+		</div>
+		<div id="Main" class="tabcontent">
+			<p id="points">0 Bloons </p>
+			<p id="bloonspersec">0 Bloons per second</p>
+			<button id="click" onmouseup="addBloons()">Pop!</button>
+			<br>
+			<button id="dartMonkey" onclick="buyDart()">Buy Dart Monkey for 50 Bloons</button>
+			<p id="dartAmmount">You have 0 Dart Monkeys</p>
+			<p id="dartProduce">Pops 1 Bloon per second</p>
+			<br>
+			<button id="tackShooter" onclick="buyTack()">Buy Tack Shooter for 250 Bloons</button>
+			<p id="tackAmmount">You have 0 Tack Shooters</p>
+			<p id="tackProduce">Pops 5 Bloons per second</p>
+			<br>
+			<button id="sniperMonkey" onclick="buySniper()">Buy Sniper Monkey for 1000 Bloons</button>
+			<p id="sniperAmmount">You have 0 Sniper Monkeys</p>
+			<p id="sniperProduce">Pops 20 Bloons per second</p>
+			<br>
+		</div>
+		<div id="Upgrades" class="tabcontent">
+			<div id="clickUpgrades" class="upgrades">
+				<div id="clickStrength">
+					<button id="buyClickUpgrade" class="clickStrength" onclick="clickHarder()">Increase click strength</button>
+					<p id="clickCostDisplay" class="clickStrength"></p>
+				</div>
+			</div>
+			<div id="davidUpgrades" class="upgrades">
+				<div id="davidRedbull">
+					<button id="redbull" class="davidRedbull" onclick="davidRedBull()">Buy david redbull for 100 Lines of code</button>
+					<p class="davidRedbull">Makes david write twice as many lines of code per second</p>
+				</div>
+			</div>
+		</div>
+		<div id="Options" class="tabcontent">
+			<div id="mainOptions">
+				<button id="reset" class="resetGame" onclick="resetGame()"> Reset everything in the game </button>
+				<p>Careful! I'm pretty sure this button works!</p>
+				<p>Input refresh rate in ms. This does not slow or speed up line generation</p>
+				<input type="number" id="refreshRate" value=100>
+				<button onclick="refreshRate()">Update rate</button>
+			</div>
+		</div>
+	</body>
 </html>
