@@ -47,7 +47,7 @@ function loadSave() { //loads the saved values from local storage
 	}
 }
 
-function loadDarts() { //updates the HTML elements related to David affter loading
+function loadDarts() { //updates the HTML elements related to Dart Monkey affter loading
 	savedDarts = localStorage.darts;
 	dartTotal = parseInt(savedDarts);
 	dartPrice = Math.ceil(50 * 1.15**dartTotal);
@@ -61,7 +61,7 @@ function loadDarts() { //updates the HTML elements related to David affter loadi
 	document.getElementById("dartProduce").innerHTML = 'Pops ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second';
 }
 
-function loadTacks() { //updates the HTML elements related to izzy affter loading
+function loadTacks() { //updates the HTML elements related to Tack Shooter affter loading
 	savedTacks = localStorage.tacks;
 	tackTotal = parseInt(savedTacks);
 	tackPrice = Math.ceil(250 * 1.15**tackTotal);
