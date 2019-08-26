@@ -132,9 +132,9 @@ window.setInterval(function() {
 
 window.setInterval(function() { //Saves game data every 15 seconds
 	localStorage.setItem("bloons", bloons);
-	localStorage.setItem("dartMonkeys", dartTotal);
-	localStorage.setItem("tackShooters", tackTotal);
-	localStorage.setItem("sniperMonkeys", sniperTotal);
+	localStorage.setItem("dartMonkey", dartTotal);
+	localStorage.setItem("tackShooter", tackTotal);
+	localStorage.setItem("sniperMonkey", sniperTotal);
 	console.log("Game Saved");
 }, 15000);
 
