@@ -193,22 +193,22 @@ function resetGame() {
 }
 
 function resetVariables(){
-	var totalLPS = 0;
-	var points = 0;
-	var pointstext = document.getElementById("points");
-	var clickStr = 1;
-	var clickCost = 50;
-	var refreshRateVar = 100;
-	var davidPrice = 10;
-	var davidTotal = 0;
-	var davidLPS = 0.1;
-	var izzyPrice = 100;
-	var izzyTotal = 0;
-	var izzyLPS = 1;
-	var nicolePrice = 1100;
-	var nicoleTotal = 0;
-	var nicoleLPS = 8;
-	var davidredbullUpgrade = false
+	var totalBPS = 0;
+        var bloons = 0;
+        var bloonstext = document.getElementById("bloons");
+        var clickStr = 1;
+        var clickCost = 100;
+        var refreshRateVar = 100;
+        var dartPrice = 50;
+        var dartTotal = 0;
+        var dartBPS = 1;
+        var tackPrice = 250;
+        var tackTotal = 0;
+        var tackBPS = 5;
+        var sniperPrice = 1000;
+        var sniperTotal = 0;
+        var sniperBPS = 20;
+        var dartpowerUpgrade = false
 }
 
 function refreshRate() {
