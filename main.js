@@ -1,4 +1,4 @@
-var bloons = 0;
+var bloons = 100;
 var dartTotal = 0;
 var tackTotal = 0;
 var sniperTotal = 0;
