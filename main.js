@@ -35,8 +35,8 @@ var sniperBPS = 20;
 var dartpowerUpgrade = false
 
 function loadSave() { //loads the saved values from local storage
-	if(localStorage.bloons) { //checks for a local save
-		savedBloons = localStorage.bloons;
+	if(localStorage.bloonpops) { //checks for a local save
+		savedBloons = localStorage.bloonpops;
 		bloons = parseInt(savedBloons); clickStr = parseInt(localStorage.clickStr); clickCost = parseInt(localStorage.clickCost);
 		loadDarts();
 		loadTacks();
@@ -131,7 +131,7 @@ window.setInterval(function() {
 }, refreshRateVar);
 
 window.setInterval(function() { //Saves game data every 15 seconds
-	localStorage.setItem("bloons", bloons);
+	localStorage.setItem("bloonpops", bloons);
 	localStorage.setItem("dartMonkey", dartTotal);
 	localStorage.setItem("tackShooter", tackTotal);
 	localStorage.setItem("sniperMonkey", sniperTotal);
@@ -152,7 +152,7 @@ function checkUpgrades() {
 	}
 }
 
-function dartpower() {
+function powerdart() {
 	var dartpowerCost = 100
 	if(bloons >= dartpowerCost) {
 		bloons = bloons - dartpowerCost;
