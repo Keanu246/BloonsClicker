@@ -82,7 +82,7 @@ function loadSnipers() {
 function addBloons() { //function for clicking
 	bloons = bloons + clickStr;
 	//console.log(getCookie("bloons"))l;
-	document.getElementById("bloons").innerHTML = points.toFixed(1) + ' Bloons';
+	document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
 }
 
 function buyDart() { //function for buying more davids
@@ -107,34 +107,34 @@ function buyTack() { //Function for buying more izzys
 	}
 }
 
-function buyNicole() {
-	if(points >=nicolePrice) {
-		points = points - nicolePrice;
-		nicoleTotal = nicoleTotal + 1;
-		nicolePrice = Math.ceil(1100 * 1.15**nicoleTotal);
-		document.getElementById("nicole").innerHTML = 'Buy a Nicole for ' + nicolePrice + ' Lines of code';
-		document.getElementById("nicoleAmmount").innerHTML = 'you have ' + nicoleTotal + ' Nicoles';
-		document.getElementById("nicoleProduce").innerHTML = 'Writing ' + (nicoleLPS * nicoleTotal).toFixed(1) + ' Lines of code per second';
+function buySniper() {
+	if(bloons >= sniperPrice) {
+		bloons = bloons - sniperPrice;
+		sniperTotal = sniperTotal + 1;
+		sniperPrice = Math.ceil(1000 * 1.15**sniperTotal);
+		document.getElementById("sniperMonkey").innerHTML = 'Buy a Sniper Monkey for ' + sniperPrice + ' Bloons';
+		document.getElementById("sniperAmmount").innerHTML = 'you have ' + sniperTotal + ' Sniper Monkeys';
+		document.getElementById("sniperProduce").innerHTML = 'Pops ' + (sniperBPS * sniperTotal).toFixed(1) + ' bloons per second';
 	}
 }
 
-window.setInterval(function() { //Adds together all the Lines of Code and then updates the elements in the HTML
-	  points = (points + (davidTotal * davidLPS) + (izzyTotal * izzyLPS) + (nicoleTotal * nicoleLPS));
-		totalLPS = ((davidTotal * davidLPS) + (izzyTotal * izzyLPS) + (nicoleLPS * nicoleTotal));
-		document.getElementById("codepersec").innerHTML = totalLPS.toFixed(1) + ' Lines per second'
-		document.getElementById("points").innerHTML = points.toFixed(1) + ' Lines of code';
-		document.cookie = "points=" + points.toFixed(1);
+window.setInterval(function() { //Adds together all the Bloons and then updates the elements in the HTML
+	  points = (points + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS));
+		totalBPS = ((dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS));
+		document.getElementById("bloonspersec").innerHTML = totalBPS.toFixed(1) + ' bloons per second'
+		document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
+		document.cookie = "bloons=" + bloons.toFixed(1);
 }, 1000); // dont change this to anything other than 1000 lol
 
 window.setInterval(function() {
-	document.getElementById("points").innerHTML = points.toFixed(1) + ' Lines of code';
+	document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
 }, refreshRateVar);
 
 window.setInterval(function() { //Saves game data every 15 seconds
-	localStorage.setItem("linesofcode", points);
-	localStorage.setItem("davids", davidTotal);
-	localStorage.setItem("izzys", izzyTotal);
-	localStorage.setItem("nicoles", nicoleTotal);
+	localStorage.setItem("bloons", bloons);
+	localStorage.setItem("dartMonkeys", dartTotal);
+	localStorage.setItem("tackShooters", tackTotal);
+	localStorage.setItem("sniperMonkeys", sniperTotal);
 	console.log("Game Saved");
 }, 15000);
 
