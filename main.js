@@ -79,7 +79,7 @@ function loadSnipers() {
 	document.getElementById("sniperProduce").innerHTML = 'Pops ' + (sniperBPS * sniperTotal).toFixed(1) + ' bloons per second';
 }
 
-function addBloons() { //function for clicking
+function addPoints() { //function for clicking
 	bloons = bloons + clickStr;
 	//console.log(getCookie("bloons"))l;
 	document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
