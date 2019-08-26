@@ -85,7 +85,7 @@ function addBloons() { //function for clicking
 	document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
 }
 
-function buyDart() { //function for buying more davids
+function buyDart() { //function for buying more Dart Monkeys
 	if(bloons >= dartPrice) {
 		bloons = bloons - dartPrice;
 		dartTotal = dartTotal + 1;
@@ -96,7 +96,7 @@ function buyDart() { //function for buying more davids
 	}
 }
 
-function buyTack() { //Function for buying more izzys
+function buyTack() { //Function for buying more Tack Shooters
 	if(bloons >= tackPrice) {
 		bloons = bloons - tackPrice;
 		tackTotal = tackTotal + 1;
@@ -143,25 +143,25 @@ window.setInterval(function() { //Saves game data every 15 seconds
 ----This section represents the Upgrades page of the javascript----
 */
 function checkUpgrades() {
-	console.log(davidredbullUpgrade);
-	if(davidTotal >= 1 && davidredbullUpgrade != true) {
-		var davidredbullElements = document.getElementsByClassName("davidRedbull");
-		for (i = 0; i < davidredbullElements.length; i++){
-			davidredbullElements[i].style.display = "inline";
+	console.log(dartpowerUpgrade);
+	if(dartTotal >= 1 && dartpowerUpgrade != true) {
+		var dartpowerElements = document.getElementsByClassName("dartpower");
+		for (i = 0; i < dartpowerElements.length; i++){
+			dartpowerElements[i].style.display = "inline";
 		}
 	}
 }
 
-function davidRedBull() {
-	var davidredbullCost = 100
-	if(points >= davidredbullCost) {
-		points = points - davidredbullCost;
-		davidredbull = true;
-		localStorage.setItem("davidredbull", true);
-		davidLPS = davidLPS * 2;
-		var davidredbullElements = document.getElementsByClassName("davidRedbull");
-		for (i = 0; i < davidredbullElements.length; i++){
-			davidredbullElements[i].style.display = "none";
+function dartpower() {
+	var dartpowerCost = 100
+	if(bloons >= dartpowerCost) {
+		bloons = bloons - dartpowerCost;
+		dartpower = true;
+		localStorage.setItem("dartpower", true);
+		dartBPS = dartBPS * 2;
+		var dartpowerElements = document.getElementsByClassName("dartpower");
+		for (i = 0; i < dartpowerElements.length; i++){
+			dartpowerElements[i].style.display = "none";
 		}
 	}
 }
