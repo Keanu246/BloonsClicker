@@ -58,7 +58,7 @@ function loadDarts() { //updates the HTML elements related to David affter loadi
 	}
 	document.getElementById("dartMonkey").innerHTML = 'Buy a Dart Monkey for ' + dartPrice + ' Bloons';
 	document.getElementById("dartAmmount").innerHTML = 'you have ' + dartTotal + ' Dart Monkeys';
-	document.getElementById("dartProduce").innerHTML = 'Writing ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second';
+	document.getElementById("dartProduce").innerHTML = 'Pops ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second';
 }
 
 function loadTacks() { //updates the HTML elements related to izzy affter loading
@@ -79,7 +79,7 @@ function loadSnipers() {
 	document.getElementById("sniperProduce").innerHTML = 'Pops ' + (sniperBPS * sniperTotal).toFixed(1) + ' bloons per second';
 }
 
-function addPoints() { //function for clicking
+function addBloons() { //function for clicking
 	bloons = bloons + clickStr;
 	//console.log(getCookie("bloons"))l;
 	document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
