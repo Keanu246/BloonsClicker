@@ -119,7 +119,7 @@ function buySniper() {
 }
 
 window.setInterval(function() { //Adds together all the Bloons and then updates the elements in the HTML
-	  points = (points + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS));
+	  bloons = (bloons + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS));
 		totalBPS = ((dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS));
 		document.getElementById("bloonspersec").innerHTML = totalBPS.toFixed(1) + ' bloons per second'
 		document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
@@ -168,8 +168,8 @@ function davidRedBull() {
 
 function clickHarder() { // Upgrade click ability
 
-	if (points >= clickCost) {
-		points = points - clickCost;
+	if (bloons >= clickCost) {
+		bloons = bloons - clickCost;
 		clickStr = clickStr + 1;
 		clickCost = clickCost*2.75;
 		localStorage.setItem("clickStr", clickStr); localStorage.setItem("clickCost", clickCost);
