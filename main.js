@@ -191,16 +191,6 @@ function resetVariables(){
         var dartpowerUpgrade = false
 }
 
-function quickSin(x)
-{
-	//oh man this isn't all that fast actually
-	//why do I do this. why
-	var sign=x<0?-1:1;
-	return sinArray[Math.round(
-		(Math.abs(x)*360/Math.PI/2)%360
-	)]*sign;
-}
-
 function refreshRate() {
 	// hey should you use the same name for functions and variables? maybe
 	refreshRateVar = parseInt(document.getElementById("refreshRate").value);
