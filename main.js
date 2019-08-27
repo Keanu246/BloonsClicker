@@ -32,6 +32,15 @@ var tackBPS = 5;
 var sniperPrice = 1000;
 var sniperTotal = 0;
 var sniperBPS = 20;
+var boomerangPrice = 10000;
+var boomerangTotal = 0;
+var boomerangBPS = 150;
+var bombPrice = 100000;
+var bombTotal = 0;
+var bombBPS = 1000;
+var gluePrice = 1000000;
+var glueTotal = 0;
+var glueBPS = 8000;
 var dartpowerUpgrade = false
 
 
@@ -79,7 +88,7 @@ function buyDart() { //function for buying more Dart Monkeys
 		dartTotal = dartTotal + 1;
 		dartPrice = Math.ceil(50 * 1.15**dartTotal);
 		document.getElementById("dartMonkey").innerHTML = 'Buy a Dart Monkey for ' + dartPrice + ' Bloons';
-		document.getElementById("dartAmmount").innerHTML = 'you have ' + dartTotal + ' Dart Monkeys';
+		document.getElementById("dartAmmount").innerHTML = 'You have ' + dartTotal + ' Dart Monkeys';
 		document.getElementById("dartProduce").innerHTML = 'Pops ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second';
 	}
 }
@@ -90,7 +99,7 @@ function buyTack() { //Function for buying more Tack Shooters
 		tackTotal = tackTotal + 1;
 		tackPrice = Math.ceil(250 * 1.15**tackTotal);
 		document.getElementById("tackShooter").innerHTML = 'Buy a Tack Shooter for ' + tackPrice + ' Bloons';
-		document.getElementById("tackAmmount").innerHTML = 'you have ' + tackTotal + ' Tack Shooters';
+		document.getElementById("tackAmmount").innerHTML = 'You have ' + tackTotal + ' Tack Shooters';
 		document.getElementById("tackProduce").innerHTML = 'Pops ' + (tackBPS * tackTotal).toFixed(1) + ' bloons per second';
 	}
 }
@@ -101,8 +110,19 @@ function buySniper() {
 		sniperTotal = sniperTotal + 1;
 		sniperPrice = Math.ceil(1000 * 1.15**sniperTotal);
 		document.getElementById("sniperMonkey").innerHTML = 'Buy a Sniper Monkey for ' + sniperPrice + ' Bloons';
-		document.getElementById("sniperAmmount").innerHTML = 'you have ' + sniperTotal + ' Sniper Monkeys';
+		document.getElementById("sniperAmmount").innerHTML = 'You have ' + sniperTotal + ' Sniper Monkeys';
 		document.getElementById("sniperProduce").innerHTML = 'Pops ' + (sniperBPS * sniperTotal).toFixed(1) + ' bloons per second';
+	}
+}
+
+function buyBoomerang() {
+	if(bloons >= boomerangPrice) {
+		bloons = bloons - boomerangPrice;
+		boomerangTotal = boomerangTotal + 1;
+		boomerangPrice = Math.ceil(10000 * 1.15**boomerangTotal);
+		document.getElementById("boomerangMonkey").innerHTML = 'Buy a Boomerang Thrower for ' + boomerangPrice + ' Bloons';
+		document.getElementById("boomerangAmmount").innerHTML = 'You have ' + boomerangTotal + ' Boomerang Throwers';
+	
 	}
 }
 
