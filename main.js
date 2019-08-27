@@ -86,7 +86,7 @@ function buyDart() { //function for buying more Dart Monkeys
 	if(bloons >= dartPrice) {
 		bloons = bloons - dartPrice;
 		dartTotal = dartTotal + 1;
-		dartPrice = Math.ceil(50 * 1.15**dartTotal);
+		dartPrice = Math.ceil(50 * 1.11**dartTotal);
 		document.getElementById("dartMonkey").innerHTML = 'Buy a Dart Monkey for ' + dartPrice + ' Bloons';
 		document.getElementById("dartAmmount").innerHTML = 'You have ' + dartTotal + ' Dart Monkeys';
 		document.getElementById("dartProduce").innerHTML = 'Pops ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second';
