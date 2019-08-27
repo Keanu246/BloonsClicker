@@ -254,4 +254,5 @@ var numberFormatters =
 		' octodecillion',
 		' novemdecillion',
 		' vigintillion'
+	])
 		
