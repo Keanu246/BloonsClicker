@@ -47,7 +47,13 @@ var iceBPS = 80000;
 var ninjaPrice = 250000000;
 var ninjaTotal = 0;
 var ninjaBPS = 1000000;
-var dartpowerUpgrade = false
+var wizardPrice = 5000000000;
+var wizardTotal = 0;
+var wizardBPS = 25000000;
+var dartpowerUpgrade = false;
+var dartpower2Upgrade = false;
+var tackpowerUpgrade = false;
+var tackpower2Upgrade = false
 
 
 function loadDarts() { //updates the HTML elements related to Dart Monkey affter loading
@@ -213,6 +219,48 @@ function dartpower() {
 		var dartpowerElements = document.getElementsByClassName("dartpower");
 		for (i = 0; i < dartpowerElements.length; i++){
 			dartpowerElements[i].style.display = "none";
+		}
+	}
+}
+
+function dartpower2() {
+	var dartpower2Cost = 1000
+	if(bloons >= dartpower2Cost) {
+		bloons = bloons - dartpower2Cost;
+		dartpower2 = true;
+		localStorage.setItem("dartpower2", true);
+		dartBPS = dartBPS * 2;
+		var dartpower2Elements = document.getElementsByClassName("dartpower2");
+		for (i = 0; i < dartpower2Elements.length; i++){
+			dartpower2Elements[i].style.display = "none";
+		}
+	}
+}
+
+function tackpower() {
+	var tackpowerCost = 500
+	if(bloons >= tackpowerCost) {
+		bloons = bloons - tackpowerCost;
+		tackpower = true;
+		localStorage.setItem("tackpower", true);
+		tackBPS = tackBPS * 2;
+		var tackpowerElements = document.getElementsByClassName("tackpower");
+		for (i = 0; i < tackpowerElements.length; i++){
+			tackpowerElements[i].style.display = "none";
+		}
+	}
+}
+
+function tackpower2() {
+	var tackpower2Cost = 2500
+	if(bloons >= tackpower2Cost) {
+		bloons = bloons - tackpower2Cost;
+		tackpower2 = true;
+		localStorage.setItem("tackpower2", true);
+		tackBPS = tackBPS * 2;
+		var tackpower2Elements = document.getElementsByClassName("tackpower2");
+		for (i = 0; i < tackpower2Elements.length; i++){
+			tackpower2Elements[i].style.display = "none";
 		}
 	}
 }
