@@ -122,7 +122,18 @@ function buyBoomerang() {
 		boomerangPrice = Math.ceil(10000 * 1.15**boomerangTotal);
 		document.getElementById("boomerangMonkey").innerHTML = 'Buy a Boomerang Thrower for ' + boomerangPrice + ' Bloons';
 		document.getElementById("boomerangAmmount").innerHTML = 'You have ' + boomerangTotal + ' Boomerang Throwers';
-	
+		document.getElementById("boomerangProduce").innerHTML = 'Pops ' + (boomerangBPS * boomerangTotal).toFixed(1) + ' bloons per second';
+	}
+}
+
+function buyBomb() {
+	if(bloons >= bombPrice) {
+		bloons = bloons - bombPrice;
+		bombTotal = bombTotal + 1;
+		bombPrice = Math.ceil(100000 * 1.15**bombTotal);
+		document.getElementById("bombShooter").innerHTML = 'Buy a Bomb Tower for ' + bombPrice + ' Bloons';
+		document.getElementById("bombAmmount").innerHTML = 'You have ' + bombTotal + ' Bomb Towers';
+		document.getElementById("bombProduce").innerHTML = 'Pops ' + (bombBPS * bombTotal).toFixed(1) + ' bloons per second';
 	}
 }
 
