@@ -154,6 +154,17 @@ function buyGlue() {
 	}
 }
 
+function buyIce() {
+	if(bloons >= icePrice) {
+		bloons = bloons - icePrice;
+		iceTotal = iceTotal + 1;
+		gluePrice = Math.ceil(15000000 * 1.15**iceTotal);
+		document.getElementById("iceMonkey").innerHTML = 'Buy an Ice Monkey for ' + icePrice + ' Bloons';
+		document.getElementById("iceAmmount").innerHTML = 'You have ' + iceTotal + ' Ice Monkeys';
+		document.getElementById("iceProduce").innerHTML = 'Pops ' + (iceBPS * iceTotal).toFixed(1) + ' bloons per second';
+	}
+}
+
 window.setInterval(function() { //Adds together all the Bloons and then updates the elements in the HTML
 	  bloons = (bloons + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS));
 		totalBPS = ((dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS));
