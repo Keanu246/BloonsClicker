@@ -224,12 +224,26 @@ function dartpower2() {
 	var dartpower2Cost = 1000
 	if(bloons >= dartpower2Cost) {
 		bloons = bloons - dartpower2Cost;
-		dartpower = true;
+		dartpower2 = true;
 		localStorage.setItem("dartpower2", true);
 		dartBPS = dartBPS * 2;
 		var dartpower2Elements = document.getElementsByClassName("dartpower2");
 		for (i = 0; i < dartpower2Elements.length; i++){
 			dartpower2Elements[i].style.display = "none";
+		}
+	}
+}
+
+function tackpower() {
+	var tackpowerCost = 500
+	if(bloons >= tackpowerCost) {
+		bloons = bloons - tackpowerCost;
+		tackpower = true;
+		localStorage.setItem("tackpower", true);
+		tackBPS = tackBPS * 2;
+		var tackpowerElements = document.getElementsByClassName("tackpower");
+		for (i = 0; i < tackpowerElements.length; i++){
+			tackpowerElements[i].style.display = "none";
 		}
 	}
 }
