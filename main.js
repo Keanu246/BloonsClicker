@@ -165,6 +165,18 @@ function buyIce() {
 	}
 }
 
+function buyNinja() {
+	if(bloons >= ninjaPrice) {
+		bloons = bloons - ninjaPrice;
+		ninjaTotal = ninjaTotal + 1;
+		gluePrice = Math.ceil(250000000 * 1.15**ninjaTotal);
+		document.getElementById("ninjaMonkey").innerHTML = 'Buy a Ninja Monkey for ' + ninjaPrice + ' Bloons';
+		document.getElementById("ninjaAmmount").innerHTML = 'You have ' + ninjaTotal + ' Ninja Monkeys';
+		document.getElementById("ninjaProduce").innerHTML = 'Pops ' + (ninjaBPS * ninjaTotal).toFixed(1) + ' bloons per second';
+	}
+}
+
+
 window.setInterval(function() { //Adds together all the Bloons and then updates the elements in the HTML
 	  bloons = (bloons + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS));
 		totalBPS = ((dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS));
