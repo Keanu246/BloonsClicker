@@ -207,6 +207,16 @@ function checkUpgrades() {
 	}
 }
 
+function checkUpgrades() {
+	console.log(tackpowerUpgrade);
+	if(tackTotal >= 1 && tackpowerUpgrade != true) {
+		var tackpowerElements = document.getElementsByClassName("tackpower");
+		for (i = 0; i < tackpowerElements.length; i++){
+			tackpowerElements[i].style.display = "inline";
+		}
+	}
+}
+
 function dartpower() {
 	var dartpowerCost = 100
 	if(bloons >= dartpowerCost) {
