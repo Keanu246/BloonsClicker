@@ -51,9 +51,7 @@ var wizardPrice = 5000000000;
 var wizardTotal = 0;
 var wizardBPS = 25000000;
 var dartpowerUpgrade = false;
-var dartpower2Upgrade = false;
-var tackpowerUpgrade = false;
-var tackpower2Upgrade = false
+var tackpowerUpgrade = false
 
 
 function loadDarts() { //updates the HTML elements related to Dart Monkey affter loading
@@ -205,6 +203,16 @@ function checkUpgrades() {
 		var dartpowerElements = document.getElementsByClassName("dartpower");
 		for (i = 0; i < dartpowerElements.length; i++){
 			dartpowerElements[i].style.display = "inline";
+		}
+	}
+}
+
+function checkUpgrades() {
+	console.log(tackpowerUpgrade);
+	if(tackTotal >= 1 && tackpowerUpgrade != true) {
+		var tackpowerElements = document.getElementsByClassName("tackpower");
+		for (i = 0; i < tackpowerElements.length; i++){
+			tackpowerElements[i].style.display = "inline";
 		}
 	}
 }
