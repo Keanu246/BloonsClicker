@@ -138,8 +138,8 @@ function buyBomb() {
 }
 
 window.setInterval(function() { //Adds together all the Bloons and then updates the elements in the HTML
-	  bloons = (bloons + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS));
-		totalBPS = ((dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS));
+	  bloons = (bloons + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS));
+		totalBPS = ((dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS));
 		document.getElementById("bloonspersec").innerHTML = totalBPS.toFixed(1) + ' bloons per second'
 		document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
 		document.cookie = "bloons=" + bloons.toFixed(1);
@@ -182,7 +182,7 @@ function clickHarder() { // Upgrade click ability
 	if (bloons >= clickCost) {
 		bloons = bloons - clickCost;
 		clickStr = clickStr + 1;
-		clickCost = clickCost*2.75;
+		clickCost = clickCost*1.5;
 		localStorage.setItem("clickStr", clickStr); localStorage.setItem("clickCost", clickCost);
 		document.getElementById("clickCostDisplay").innerHTML = "Current level: " + clickStr.toFixed(1) + " Cost for next level: " + clickCost.toFixed(1);
 	}
