@@ -248,6 +248,20 @@ function tackpower() {
 	}
 }
 
+function tackpower2() {
+	var tackpower2Cost = 2500
+	if(bloons >= tackpower2Cost) {
+		bloons = bloons - tackpower2Cost;
+		tackpower2 = true;
+		localStorage.setItem("tackpower2", true);
+		tackBPS = tackBPS * 2;
+		var tackpower2Elements = document.getElementsByClassName("tackpower2");
+		for (i = 0; i < tackpower2Elements.length; i++){
+			tackpower2Elements[i].style.display = "none";
+		}
+	}
+}
+
 function clickHarder() { // Upgrade click ability
 
 	if (bloons >= clickCost) {
