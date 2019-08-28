@@ -51,7 +51,9 @@ var wizardPrice = 5000000000;
 var wizardTotal = 0;
 var wizardBPS = 25000000;
 var dartpowerUpgrade = false;
-var tackpowerUpgrade = false
+var dartpower2Upgrade = false;
+var tackpowerUpgrade = false;
+var tackpower2Upgrade = false
 
 
 function loadDarts() { //updates the HTML elements related to Dart Monkey affter loading
@@ -277,7 +279,7 @@ function clickHarder() { // Upgrade click ability
 
 	if (bloons >= clickCost) {
 		bloons = bloons - clickCost;
-		clickStr = clickStr + 1;
+		clickStr = clickStr + 1.5;
 		clickCost = clickCost*1.5;
 		localStorage.setItem("clickStr", clickStr); localStorage.setItem("clickCost", clickCost);
 		document.getElementById("clickCostDisplay").innerHTML = "Current level: " + clickStr.toFixed(1) + " Cost for next level: " + clickCost.toFixed(1);
