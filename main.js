@@ -220,6 +220,20 @@ function dartpower() {
 	}
 }
 
+function dartpower2() {
+	var dartpower2Cost = 1000
+	if(bloons >= dartpower2Cost) {
+		bloons = bloons - dartpower2Cost;
+		dartpower = true;
+		localStorage.setItem("dartpower2", true);
+		dartBPS = dartBPS * 2;
+		var dartpower2Elements = document.getElementsByClassName("dartpower2");
+		for (i = 0; i < dartpower2Elements.length; i++){
+			dartpower2Elements[i].style.display = "none";
+		}
+	}
+}
+
 function clickHarder() { // Upgrade click ability
 
 	if (bloons >= clickCost) {
