@@ -178,8 +178,8 @@ function buyNinja() {
 
 
 window.setInterval(function() { //Adds together all the Bloons and then updates the elements in the HTML
-	  bloons = (bloons + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS));
-		totalBPS = ((dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS));
+	  bloons = (bloons + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS) + (iceTotal * iceBPS) + (ninjaTotal * ninjaBPS));
+		totalBPS = ((dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS + (iceTotal * iceBPS) + (ninjaTotal * ninjaBPS));
 		document.getElementById("bloonspersec").innerHTML = totalBPS.toFixed(1) + ' bloons per second'
 		document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
 		document.cookie = "bloons=" + bloons.toFixed(1);
