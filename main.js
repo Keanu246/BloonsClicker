@@ -41,6 +41,12 @@ var bombBPS = 1000;
 var gluePrice = 1000000;
 var glueTotal = 0;
 var glueBPS = 8000;
+var icePrice = 15000000;
+var iceTotal = 0;
+var iceBPS = 80000;
+var ninjaPrice = 250000000;
+var ninjaTotal = 0;
+var ninjaBPS = 1000000;
 var dartpowerUpgrade = false
 
 
@@ -137,9 +143,20 @@ function buyBomb() {
 	}
 }
 
+function buyGlue() {
+	if(bloons >= gluePrice) {
+		bloons = bloons - gluePrice;
+		glueTotal = glueTotal + 1;
+		gluePrice = Math.ceil(1000000 * 1.15**glueTotal);
+		document.getElementById("glueGunner").innerHTML = 'Buy an Glue Gunner for ' + gluePrice + ' Bloons';
+		document.getElementById("glueAmmount").innerHTML = 'You have ' + glueTotal + ' Glue Gunners';
+		document.getElementById("glueProduce").innerHTML = 'Pops ' + (glueBPS * glueTotal).toFixed(1) + ' bloons per second';
+	}
+}
+
 window.setInterval(function() { //Adds together all the Bloons and then updates the elements in the HTML
-	  bloons = (bloons + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS));
-		totalBPS = ((dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS));
+	  bloons = (bloons + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS));
+		totalBPS = ((dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS));
 		document.getElementById("bloonspersec").innerHTML = totalBPS.toFixed(1) + ' bloons per second'
 		document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
 		document.cookie = "bloons=" + bloons.toFixed(1);
