@@ -53,7 +53,7 @@ var wizardBPS = 25000000;
 var dartpowerUpgrade = false;
 var dartpower2Upgrade = false;
 var tackpowerUpgrade = false;
-var tackpower2Upgrade = false
+var tackpowerUpgrade = false
 
 
 function loadDarts() { //updates the HTML elements related to Dart Monkey affter loading
@@ -210,11 +210,31 @@ function checkUpgrades() {
 }
 
 function checkUpgrades() {
+	console.log(dartpower2Upgrade);
+	if(dartTotal >= 1 && dartpower2Upgrade != true) {
+		var dartpower2Elements = document.getElementsByClassName("dartpower2");
+		for (i = 0; i < dartpower2Elements.length; i++){
+			dartpower2Elements[i].style.display = "inline";
+		}
+	}
+}
+
+function checkUpgrades() {
 	console.log(tackpowerUpgrade);
 	if(tackTotal >= 1 && tackpowerUpgrade != true) {
 		var tackpowerElements = document.getElementsByClassName("tackpower");
 		for (i = 0; i < tackpowerElements.length; i++){
 			tackpowerElements[i].style.display = "inline";
+		}
+	}
+}
+
+function checkUpgrades() {
+	console.log(tackpower2Upgrade);
+	if(tackTotal >= 1 && tackpower2Upgrade != true) {
+		var tackpower2Elements = document.getElementsByClassName("tackpower2");
+		for (i = 0; i < tackpower2Elements.length; i++){
+			tackpower2Elements[i].style.display = "inline";
 		}
 	}
 }
@@ -279,8 +299,8 @@ function clickHarder() { // Upgrade click ability
 
 	if (bloons >= clickCost) {
 		bloons = bloons - clickCost;
-		clickStr = clickStr + 999;
-		clickCost = clickCost*1.5;
+		clickStr = clickStr + 1;
+		clickCost = clickCost*1.25;
 		localStorage.setItem("clickStr", clickStr); localStorage.setItem("clickCost", clickCost);
 		document.getElementById("clickCostDisplay").innerHTML = "Current level: " + clickStr.toFixed(1) + " Cost for next level: " + clickCost.toFixed(1);
 	}
