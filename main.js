@@ -47,6 +47,9 @@ var iceBPS = 80000;
 var ninjaPrice = 250000000;
 var ninjaTotal = 0;
 var ninjaBPS = 1000000;
+var wizardPrice = 5000000000;
+var wizardTotal = 0;
+var wizardBPS = 25000000;
 var dartpowerUpgrade = false
 
 
