@@ -52,7 +52,11 @@ var wizardTotal = 0;
 var wizardBPS = 25000000;
 var dartpowerUpgrade = false;
 var dartpower2Upgrade = false;
-var tripledartsUpgrade = false
+var tripledartsUpgrade = false;
+var spikeopultUpgrade = false;
+var crossbowUpgrade = false;
+var tackpowerUpgrade = false;
+var tackpower2Upgrade = false
 
 
 function loadDarts() { //updates the HTML elements related to Dart Monkey affter loading
@@ -163,7 +167,7 @@ function buyIce() {
 	if(bloons >= icePrice) {
 		bloons = bloons - icePrice;
 		iceTotal = iceTotal + 1;
-		gluePrice = Math.ceil(15000000 * 1.15**iceTotal);
+		icePrice = Math.ceil(15000000 * 1.15**iceTotal);
 		document.getElementById("iceMonkey").innerHTML = 'Buy an Ice Monkey for ' + icePrice + ' Bloons';
 		document.getElementById("iceAmmount").innerHTML = 'You have ' + iceTotal + ' Ice Monkeys';
 		document.getElementById("iceProduce").innerHTML = 'Pops ' + (iceBPS * iceTotal).toFixed(1) + ' bloons per second';
@@ -174,7 +178,7 @@ function buyNinja() {
 	if(bloons >= ninjaPrice) {
 		bloons = bloons - ninjaPrice;
 		ninjaTotal = ninjaTotal + 1;
-		gluePrice = Math.ceil(250000000 * 1.15**ninjaTotal);
+		ninjaPrice = Math.ceil(250000000 * 1.15**ninjaTotal);
 		document.getElementById("ninjaMonkey").innerHTML = 'Buy a Ninja Monkey for ' + ninjaPrice + ' Bloons';
 		document.getElementById("ninjaAmmount").innerHTML = 'You have ' + ninjaTotal + ' Ninja Monkeys';
 		document.getElementById("ninjaProduce").innerHTML = 'Pops ' + (ninjaBPS * ninjaTotal).toFixed(1) + ' bloons per second';
