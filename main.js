@@ -53,7 +53,7 @@ var wizardBPS = 25000000;
 var dartpowerUpgrade = false;
 var dartpower2Upgrade = false;
 var tackpowerUpgrade = false;
-var tackpowerUpgrade = false
+var tackpower2Upgrade = false
 
 
 function loadDarts() { //updates the HTML elements related to Dart Monkey affter loading
@@ -219,26 +219,6 @@ function checkUpgrades() {
 	}
 }
 
-function checkUpgrades() {
-	console.log(tackpowerUpgrade);
-	if(tackTotal >= 1 && tackpowerUpgrade != true) {
-		var tackpowerElements = document.getElementsByClassName("tackpower");
-		for (i = 0; i < tackpowerElements.length; i++){
-			tackpowerElements[i].style.display = "inline";
-		}
-	}
-}
-
-function checkUpgrades() {
-	console.log(tackpower2Upgrade);
-	if(tackTotal >= 1 && tackpower2Upgrade != true) {
-		var tackpower2Elements = document.getElementsByClassName("tackpower2");
-		for (i = 0; i < tackpower2Elements.length; i++){
-			tackpower2Elements[i].style.display = "inline";
-		}
-	}
-}
-
 function dartpower() {
 	var dartpowerCost = 100
 	if(bloons >= dartpowerCost) {
@@ -263,34 +243,6 @@ function dartpower2() {
 		var dartpower2Elements = document.getElementsByClassName("dartpower2");
 		for (i = 0; i < dartpower2Elements.length; i++){
 			dartpower2Elements[i].style.display = "none";
-		}
-	}
-}
-
-function tackpower() {
-	var tackpowerCost = 500
-	if(bloons >= tackpowerCost) {
-		bloons = bloons - tackpowerCost;
-		tackpower = true;
-		localStorage.setItem("tackpower", true);
-		tackBPS = tackBPS * 2;
-		var tackpowerElements = document.getElementsByClassName("tackpower");
-		for (i = 0; i < tackpowerElements.length; i++){
-			tackpowerElements[i].style.display = "none";
-		}
-	}
-}
-
-function tackpower2() {
-	var tackpower2Cost = 2500
-	if(bloons >= tackpower2Cost) {
-		bloons = bloons - tackpower2Cost;
-		tackpower2 = true;
-		localStorage.setItem("tackpower2", true);
-		tackBPS = tackBPS * 2;
-		var tackpower2Elements = document.getElementsByClassName("tackpower2");
-		for (i = 0; i < tackpower2Elements.length; i++){
-			tackpower2Elements[i].style.display = "none";
 		}
 	}
 }
