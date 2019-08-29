@@ -52,8 +52,7 @@ var wizardTotal = 0;
 var wizardBPS = 25000000;
 var dartpowerUpgrade = false;
 var dartpower2Upgrade = false;
-var tackpowerUpgrade = false;
-var tackpower2Upgrade = false
+var tripledartsUpgrade = false
 
 
 function loadDarts() { //updates the HTML elements related to Dart Monkey affter loading
@@ -219,6 +218,16 @@ function checkUpgrades() {
 	}
 }
 
+function checkUpgrades() {
+	console.log(tripledartsUpgrade);
+	if(dartTotal >= 1 && tripledartsUpgrade != true) {
+		var tripledartsElements = document.getElementsByClassName("tripledarts");
+		for (i = 0; i < tripledartsElements.length; i++){
+			tripledartsElements[i].style.display = "inline";
+		}
+	}
+}
+
 function dartpower() {
 	var dartpowerCost = 100
 	if(bloons >= dartpowerCost) {
@@ -243,6 +252,20 @@ function dartpower2() {
 		var dartpower2Elements = document.getElementsByClassName("dartpower2");
 		for (i = 0; i < dartpower2Elements.length; i++){
 			dartpower2Elements[i].style.display = "none";
+		}
+	}
+}
+
+function tripledarts() {
+	var tripledartsCost = 5000
+	if(bloons >= tripledartsCost) {
+		bloons = bloons - tripledartsCost;
+		tripledarts = true;
+		localStorage.setItem("tripledarts", true);
+		dartBPS = dartBPS * 3;
+		var tripledartsElements = document.getElementsByClassName("tripledarts");
+		for (i = 0; i < tripledartsElements.length; i++){
+			tripledartsElements[i].style.display = "none";
 		}
 	}
 }
