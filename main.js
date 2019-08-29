@@ -294,6 +294,34 @@ function tripledarts() {
 	}
 }
 
+function spikeopult() {
+	var spikeopultCost = 50000
+	if(bloons >= spikeopultCost) {
+		bloons = bloons - spikeopultCost;
+		spikeopult = true;
+		localStorage.setItem("spikeopult", true);
+		dartBPS = dartBPS * 3;
+		var spikeopultElements = document.getElementsByClassName("spikeopult");
+		for (i = 0; i < spikeopultElements.length; i++){
+			spikeopultElements[i].style.display = "none";
+		}
+	}
+}
+
+function crossbow() {
+	var crossbowCost = 1000000
+	if(bloons >= crossbowCost) {
+		bloons = bloons - crossbowCost;
+		crossbow = true;
+		localStorage.setItem("crossbow", true);
+		dartBPS = dartBPS * 5;
+		var crossbowElements = document.getElementsByClassName("crossbow");
+		for (i = 0; i < crossbowElements.length; i++){
+			crossbowElements[i].style.display = "none";
+		}
+	}
+}
+
 function clickHarder() { // Upgrade click ability
 
 	if (bloons >= clickCost) {
