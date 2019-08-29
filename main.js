@@ -214,7 +214,7 @@ function checkUpgrades() {
 
 function checkUpgrades() {
 	console.log(dartpower2Upgrade);
-	if(dartTotal >= 1 && dartpower2Upgrade != true) {
+	if(dartTotal >= 10 && dartpower2Upgrade != true) {
 		var dartpower2Elements = document.getElementsByClassName("dartpower2");
 		for (i = 0; i < dartpower2Elements.length; i++){
 			dartpower2Elements[i].style.display = "inline";
@@ -224,10 +224,30 @@ function checkUpgrades() {
 
 function checkUpgrades() {
 	console.log(tripledartsUpgrade);
-	if(dartTotal >= 1 && tripledartsUpgrade != true) {
+	if(dartTotal >= 25 && tripledartsUpgrade != true) {
 		var tripledartsElements = document.getElementsByClassName("tripledarts");
 		for (i = 0; i < tripledartsElements.length; i++){
 			tripledartsElements[i].style.display = "inline";
+		}
+	}
+}
+
+function checkUpgrades() {
+	console.log(spikeopultUpgrade);
+	if(dartTotal >= 50 && spikeopultUpgrade != true) {
+		var spikeopultElements = document.getElementsByClassName("spikeopult");
+		for (i = 0; i < spikeopultElements.length; i++){
+			spikeopultElements[i].style.display = "inline";
+		}
+	}
+}
+
+function checkUpgrades() {
+	console.log(crossbowUpgrade);
+	if(dartTotal >= 75 && crossbowUpgrade != true) {
+		var crossbowElements = document.getElementsByClassName("crossbow");
+		for (i = 0; i < crossbowElements.length; i++){
+			crossbowElements[i].style.display = "inline";
 		}
 	}
 }
