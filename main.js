@@ -22,8 +22,10 @@ var bloons = 0;
 var bloonstext = document.getElementById("bloons");
 var clickStr = 1;
 var clickCost = 100;
-var
-var
+var clickStr2 = 0;
+var clickCost2 = 10000;
+var clickStr3 = 1000;
+var clickCost3 = 500000;
 var refreshRateVar = 100;
 var dartPrice = 50;
 var dartTotal = 0;
