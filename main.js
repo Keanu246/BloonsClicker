@@ -22,10 +22,6 @@ var bloons = 0;
 var bloonstext = document.getElementById("bloons");
 var clickStr = 1;
 var clickCost = 100;
-var clickStr2 = 0;
-var clickCost2 = 10000;
-var clickStr3 = 0;
-var clickCost3 = 500000;
 var refreshRateVar = 100;
 var dartPrice = 50;
 var dartTotal = 0;
@@ -97,8 +93,6 @@ function loadSnipers() {
 
 function addBloons() { //function for clicking
 	bloons = bloons + clickStr;
-	bloons = bloons + clickStr2;
-	bloons = bloons + clickStr3;
 	//console.log(getCookie("bloons"))l;
 	document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
 }
@@ -336,28 +330,6 @@ function clickHarder() { // Upgrade click ability
 		clickCost = clickCost*1.25;
 		localStorage.setItem("clickStr", clickStr); localStorage.setItem("clickCost", clickCost);
 		document.getElementById("clickCostDisplay").innerHTML = "Current level: " + clickStr.toFixed(1) + " Cost for next level: " + clickCost.toFixed(1);
-	}
-}
-
-function clickHarder2() { // Upgrade click ability
-
-	if (bloons >= clickCost2) {
-		bloons = bloons - clickCost2;
-		clickStr2 = clickStr2 + 50;
-		clickCost2 = clickCost2*1.25;
-		localStorage.setItem("clickStr2", clickStr2); localStorage.setItem("clickCost2", clickCost2);
-		document.getElementById("clickCost2Display").innerHTML = "Current level: " + clickStr2.toFixed(1) + " Cost for next level: " + clickCost2.toFixed(1);
-	}
-}
-
-function clickHarder3() { // Upgrade click ability
-
-	if (bloons >= clickCost3) {
-		bloons = bloons - clickCost3;
-		clickStr3 = clickStr3 + 1000;
-		clickCost3 = clickCost3*1.25;
-		localStorage.setItem("clickStr3", clickStr3); localStorage.setItem("clickCost3", clickCost3);
-		document.getElementById("clickCost3Display").innerHTML = "Current level: " + clickStr3.toFixed(1) + " Cost for next level: " + clickCost3.toFixed(1);
 	}
 }
 
