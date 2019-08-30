@@ -92,7 +92,7 @@ function loadSnipers() {
 }
 
 function addBloons() { //function for clicking
-	bloons = bloons + click;
+	bloons = bloons + clickStr;
 	//console.log(getCookie("bloons"))l;
 	document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
 }
