@@ -327,7 +327,7 @@ function clickHarder() { // Upgrade click ability
 	if (bloons >= clickCost) {
 		bloons = bloons - clickCost;
 		clickStr = clickStr * 2;
-		clickCost = clickCost*1.5;
+		clickCost = clickCost*2.5;
 		localStorage.setItem("clickStr", clickStr); localStorage.setItem("clickCost", clickCost);
 		document.getElementById("clickCostDisplay").innerHTML = "Current level: " + clickStr.toFixed(1) + " Cost for next level: " + clickCost.toFixed(1);
 	}
