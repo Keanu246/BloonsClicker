@@ -185,6 +185,17 @@ function buyNinja() {
 	}
 }
 
+function buyWizard() {
+	if(bloons >= wizardPrice) {
+		bloons = bloons - wizardPrice;
+		wizardTotal = wizardTotal + 1;
+		wizardPrice = Math.ceil(5000000000 * 1.15**wizardTotal);
+		document.getElementById("wizardMonkey").innerHTML = 'Buy a Monkey Apprentice for ' + wizardPrice + ' Bloons';
+		document.getElementById("wizardAmmount").innerHTML = 'You have ' + wizardTotal + ' Monkey Apprentices';
+		document.getElementById("wizardProduce").innerHTML = 'Pops ' + (wizardBPS * wizardTotal).toFixed(1) + ' bloons per second';
+	}
+}
+
 
 window.setInterval(function() { //Adds together all the Bloons and then updates the elements in the HTML
 	  bloons = (bloons + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS) + (iceTotal * iceBPS) + (ninjaTotal * ninjaBPS));
