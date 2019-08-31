@@ -22,7 +22,6 @@ var bloons = 0;
 var bloonstext = document.getElementById("bloons");
 var clickStr = 1;
 var clickCost = 100;
-var clickBoost = 3;
 var refreshRateVar = 100;
 var dartPrice = 50;
 var dartTotal = 0;
@@ -327,15 +326,10 @@ function clickHarder() { // Upgrade click ability
 
 	if (bloons >= clickCost) {
 		bloons = bloons - clickCost;
-		clickStr = clickStr + 1;
-		clickCost = clickCost*1.25;
+		clickStr = clickStr * 2;
+		clickCost = clickCost*1.5;
 		localStorage.setItem("clickStr", clickStr); localStorage.setItem("clickCost", clickCost);
 		document.getElementById("clickCostDisplay").innerHTML = "Current level: " + clickStr.toFixed(1) + " Cost for next level: " + clickCost.toFixed(1);
-	if (bloons >= clickBoost) {
-		bloons = bloons - clickBoost
-		clickStr = clickStr * 3;
-		localStorage.setItem("clickCostDisplay", clickCostDisplay); localStorage.setItem("clickStr", clickStr);
-		}
 	}
 }
 
