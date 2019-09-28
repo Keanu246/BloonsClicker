@@ -26,3 +26,12 @@ function INP(number, round) {
   }
   return number.toString();
 }
+
+var notation = true;
+
+if(notation){ 
+        document.getElementById("bloons").innerHTML = numberformat.format(dartBPS * dartPrice) + (tackBPS * tackPrice) 
+    }
+    document.getElementById("bloons").innerHTML = (dartBPS * dartPrice) + (tackBPS * tackPrice)
+    valueSet(); 
+  } 
