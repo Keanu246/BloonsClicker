@@ -7,9 +7,9 @@ var ranges = [
     { divider: 1000000000000000000 , suffix: 'QQ' },
     { divider: 1000000000000000 , suffix: 'Q' },
     { divider: 1000000000000 , suffix: 'T' },
-	  { divider: 1000000000 , suffix: 'B' },
-	  { divider: 1000000 , suffix: 'M' },
-	  { divider: 1000 , suffix: 'K' },
+    { divider: 1000000000 , suffix: 'B' },
+    { divider: 1000000 , suffix: 'M' },
+    { divider: 1000 , suffix: 'K' },
 ];
 
 function INP(number, round) {
