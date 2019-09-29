@@ -1,4 +1,4 @@
-/ Convert numbers to words
+// Convert numbers to words
 // copyright 25th July 2006, by Stephen Chapman http://javascript.about.com
 // permission to use this Javascript on your web page is granted
 // provided that all of the code (including this copyright notice) is
