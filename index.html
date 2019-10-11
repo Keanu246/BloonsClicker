@@ -2,6 +2,9 @@
 	<head>
 		<script src="main.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+		<script src="numbers.js"></script>
+		<script src="//cdn.jsdelivr.net/gh/keanu246/idleformat@v1.0.0/dist/swarm-numberformat.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<title>Bloons Clicker</title>
 	</head>
 	<body onload="loadSave()">
@@ -69,18 +72,23 @@
 			<p id="mortarAmmount">You have 0 Mortar Monkeys</p>
 			<p id="mortarProduce">Pops 120 billion Bloons per second</p>
 			<br>
+			<button id="bananaFarm" onclick="buyFarm()">Buy a Banana Farm for 750 trillion Bloons</button>
+			<p id="farmAmmount">You have 0 Banana Farms</p>
+			<p id="farmProduce">Pops 3.5 trillion Bloons per second</p>
+			<br>
 		</div>
 		<div id="Upgrades" class="tabcontent">
 			<div id="clickUpgrades" class="upgrades">
 				<div id="clickStrength">
 					<button id="buyClickUpgrade" class="clickStrength" onclick="clickHarder()">Increase click strength</button>
 					<p id="clickCostDisplay" class="clickStrength"></p>
+					<p>Get double clicks per upgrade for more bloons.</p> 
 				</div>
 			</div>
 			<div id="towerUpgrades" class="upgrades">
 				<div id="dartpower">
 					<button id="powerdart" class="dartpower" onclick="dartpower()">Buy Dart Power for 100 Bloons</button>
-					<p class="dartpower">Dart Monkeys have more powerful darts. The production is doubled.</p>
+					<p class="dartpower">Dart Monkeys have more powerful darts and range. The production is doubled.</p>
 				</div>
 			        <div id="dartpower2">
 					<button id="powerdart2" class="dartpower2" onclick="dartpower2()">Buy Dart Power Two for 1000 Bloons</button>
@@ -90,12 +98,30 @@
 					<button id="threedarts" class="tripledarts" onclick="tripledarts()">Buy Triple Darts for 5000 Bloons</button>
 					<p class="tripledarts">Dart Monkeys have triple darts for maximise bloon pops. The production is tripled.</p>
 				</div>
+				<div id="tripledarts">
+					<button id="tripleshot" class="tripledarts" onclick="tripledarts()">Buy Triple Darts for 5000 Bloons</button>
+					<p class="tripledarts">Dart Monkeys have triple darts for maximise bloon pops. The production is tripled.</p>
+				</div>
+				<div id="spikeopult">
+					<button id="catapult" class="spikeopult" onclick="spikeopult()">Buy Spike-O-Pult for 50000 Bloons</button>
+					<p class="spikeopult">Replaces all Dart Monkeys with a catapult that shoots a spiked ball. The production is tripled.</p>
+				</div>
+				<div id="crossbow">
+					<button id="archer" class="crossbow" onclick="crossbow()">Buy Crossbow for 1000000 Bloons</button>
+					<p class="crossbow">All Dart Monkeys darts are replaced by crossbow, which is known as archer and reach Bloons at long range. The production is quintupled.</p>
+				</div>
+				<div id="tackpower">
+					<button id="powertack" class="tackpower" onclick="tackpower()">Buy Tack Power for 500 Bloons</button>
+					<p class="tackpower">Tack Shooters have more tacks and range. The production is doubled.</p>
+				</div>
+				<div id="tackpower2">
+					<button id="powertack2" class="tackpower2" onclick="tackpower2()">Buy Tack Power Two for 2500 Bloons</button>
+					<p class="tackpower2">Tack Shooters have even more tacks and fire rate. The production is doubled.</p>
+				</div>
 			</div>
 		</div>
 		<div id="Options" class="tabcontent">
 			<div id="mainOptions">
-				<button id="reset" class="resetGame" onclick="resetGame()"> Reset everything in the game </button>
-				<p>Careful! I'm pretty sure this button works!</p>
 				<p>Input refresh rate in ms. This does not slow or speed up line generation</p>
 				<input type="number" id="refreshRate" value=100>
 				<button onclick="refreshRate()">Update rate</button>
