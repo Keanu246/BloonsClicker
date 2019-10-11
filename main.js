@@ -51,45 +51,13 @@ var wizardPrice = 5000000000;
 var wizardTotal = 0;
 var wizardBPS = 25000000;
 var dartpowerUpgrade = false;
+var tackpowerUpgrade = false;
 var dartpower2Upgrade = false;
 var tripledartsUpgrade = false;
 var spikeopultUpgrade = false;
 var crossbowUpgrade = false;
 var tackpowerUpgrade = false;
 var tackpower2Upgrade = false
-
-
-function loadDarts() { //updates the HTML elements related to Dart Monkey affter loading
-	savedDarts = localStorage.darts;
-	dartTotal = parseInt(savedDarts);
-	dartPrice = Math.ceil(50 * 1.15**dartTotal);
-	dartpowerUpgrade = (localStorage.dartpower == 'true');
-	console.log(dartpowerUpgrade)
-	if(dartpowerUpgrade){
-		dartBPS = dartBPS * 2;
-	}
-	document.getElementById("dartMonkey").innerHTML = 'Buy a Dart Monkey for ' + dartPrice + ' Bloons';
-	document.getElementById("dartAmmount").innerHTML = 'you have ' + dartTotal + ' Dart Monkeys';
-	document.getElementById("dartProduce").innerHTML = 'Pops ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second';
-}
-
-function loadTacks() { //updates the HTML elements related to Tack Shooter affter loading
-	savedTacks = localStorage.tacks;
-	tackTotal = parseInt(savedTacks);
-	tackPrice = Math.ceil(250 * 1.15**tackTotal);
-	document.getElementById("tackShooter").innerHTML = 'Buy a Tack Shooter for ' + tackPrice + ' Bloons';
-	document.getElementById("tackAmmount").innerHTML = 'you have ' + tackTotal + ' Tack Shooters';
-	document.getElementById("tackProduce").innerHTML = 'Pops ' + (tackBPS * tackTotal).toFixed(1) + ' bloons per second';
-}
-
-function loadSnipers() {
-	savedSnipers = localStorage.snipers;
-	sniperTotal = parseInt(savedSnipers);
-	sniperPrice = Math.ceil(1000 * 1.15**sniperTotal);
-	document.getElementById("sniperMonkey").innerHTML = 'Buy a Sniper Monkey for ' + sniperPrice + ' Bloons';
-	document.getElementById("sniperAmmount").innerHTML = 'you have ' + sniperTotal + ' Sniper Monkeys';
-	document.getElementById("sniperProduce").innerHTML = 'Pops ' + (sniperBPS * sniperTotal).toFixed(1) + ' bloons per second';
-}
 
 function addBloons() { //function for clicking
 	bloons = bloons + clickStr;
@@ -224,6 +192,11 @@ function checkUpgrades() {
 }
 
 function checkUpgrades() {
+	console.log(tackpowerUpgrade);
+	if(tackTotal >= 1 && tackpowerUpgrade != true) {
+		var tackpowerElements = document.getElementsByClassName("tackpower");
+		for (i = 0; i < tackpowerElements.length; i++){
+			tackpowerElements[i].style.display = "inline";
 	console.log(dartpower2Upgrade);
 	if(dartTotal >= 10 && dartpower2Upgrade != true) {
 		var dartpower2Elements = document.getElementsByClassName("dartpower2");
@@ -281,7 +254,7 @@ function dartpower2() {
 	var dartpower2Cost = 1000
 	if(bloons >= dartpower2Cost) {
 		bloons = bloons - dartpower2Cost;
-		dartpower2 = true;
+		dartpower = true;
 		localStorage.setItem("dartpower2", true);
 		dartBPS = dartBPS * 2;
 		var dartpower2Elements = document.getElementsByClassName("dartpower2");
@@ -319,6 +292,17 @@ function spikeopult() {
 	}
 }
 
+function tackpower2() {
+	var tackpower2Cost = 2500
+	if(bloons >= tackpower2Cost) {
+		bloons = bloons - tackpower2Cost;
+		tackpower = true;
+		localStorage.setItem("tackpower2", true);
+		tackBPS = tackBPS * 2;
+		var tackpower2Elements = document.getElementsByClassName("tackpower2");
+		for (i = 0; i < tackpower2Elements.length; i++){
+			tackpower2Elements[i].style.display = "none";
+
 function crossbow() {
 	var crossbowCost = 1000000
 	if(bloons >= crossbowCost) {
@@ -347,36 +331,6 @@ function clickHarder() { // Upgrade click ability
 /*
 	This section represents the functions for the options tab
 */
-
-function resetGame() {
-	if(confirm("Do you want to reset the game?")){
-		localStorage.clear();
-		resetVariables();
-		location.reload();
-	}
-	else {
-
-	}
-}
-
-function resetVariables(){
-	var totalBPS = 0;
-        var bloons = 0;
-        var bloonstext = document.getElementById("bloons");
-        var clickStr = 1;
-        var clickCost = 100;
-        var refreshRateVar = 100;
-        var dartPrice = 50;
-        var dartTotal = 0;
-        var dartBPS = 1;
-        var tackPrice = 250;
-        var tackTotal = 0;
-        var tackBPS = 5;
-        var sniperPrice = 1000;
-        var sniperTotal = 0;
-        var sniperBPS = 20;
-        var dartpowerUpgrade = false
-}
 
 function refreshRate() {
 	// hey should you use the same name for functions and variables? maybe
