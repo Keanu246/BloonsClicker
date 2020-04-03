@@ -51,6 +51,9 @@ var ninjaBPS = 1000000;
 var wizardPrice = 5000000000;
 var wizardTotal = 0;
 var wizardBPS = 25000000;
+var buccaneerPrice = 100000000000;
+var buccaneerTotal = 0;
+var buccaneerBPS = 400000000;
 var dartpowerUpgrade = false;
 var dartpower2Upgrade = false;
 var tripledartsUpgrade = false;
@@ -196,10 +199,21 @@ function buyWizard() {
 	}
 }
 
+function buyBuccaneer() {
+	if(bloons >= buccaneerPrice) {
+		bloons = bloons - buccaneerPrice;
+		buccaneerTotal = buccaneerTotal + 1;
+		buccaneerPrice = Math.ceil(100000000000 * 1.15**buccaneerTotal);
+		document.getElementById("monkeyBuccaneer").innerHTML = 'Buy a Monkey Apprentice for ' + buccaneerPrice + ' Bloons';
+		document.getElementById("buccaneerAmmount").innerHTML = 'You have ' + buccaneerTotal + ' Monkey Buccaneers';
+		document.getElementById("buccaneerProduce").innerHTML = numberformat.format(buccaneerBPS, buccaneerPrice);
+	}
+}
+
 
 window.setInterval(function() { //Adds together all the Bloons and then updates the elements in the HTML
-	  bloons = (bloons + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS) + (iceTotal * iceBPS) + (ninjaTotal * ninjaBPS));
-		totalBPS = ((dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS) + (iceTotal * iceBPS) + (ninjaTotal * ninjaBPS));
+	  bloons = (bloons + (dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS) + (iceTotal * iceBPS) + (ninjaTotal * ninjaBPS) + (buccaneerTotal * buccaneerBPS));
+		totalBPS = ((dartTotal * dartBPS) + (tackTotal * tackBPS) + (sniperTotal * sniperBPS) + (boomerangTotal * boomerangBPS) + (bombTotal * bombBPS) + (glueTotal * glueBPS) + (iceTotal * iceBPS) + (ninjaTotal * ninjaBPS) + (buccaneerTotal * buccaneerBPS));
 		document.getElementById("bloonspersec").innerHTML = totalBPS.toFixed(1) + ' bloons per second'
 		document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
 		document.cookie = "bloons=" + bloons.toFixed(1);
