@@ -193,6 +193,7 @@ window.setInterval(function() {
 
 window.setInterval(function() {
 	document.getElementById("bloons").innerHTML = numberformat.format(bloons);
+	document.getElementById("bloonspersecond").innerHTML = numberformat.format(totalBPS);
 });
 
 
