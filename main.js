@@ -171,7 +171,7 @@ function buyBuccaneer() {
 		bloons = bloons - buccaneerPrice;
 		buccaneerTotal = buccaneerTotal + 1;
 		buccaneerPrice = Math.ceil(100000000000 * 1.15**buccaneerTotal);
-		document.getElementById("monkeyBuccaneer").innerHTML = 'Buy a Monkey Apprentice for ' + buccaneerPrice + ' Bloons';
+		document.getElementById("monkeyBuccaneer").innerHTML = 'Buy a Monkey Buccaneer for ' + buccaneerPrice + ' Bloons';
 		document.getElementById("buccaneerAmmount").innerHTML = 'You have ' + buccaneerTotal + ' Monkey Buccaneers';
 		document.getElementById("buccaneerProduce").innerHTML = numberformat.format(buccaneerPrice);
 	}
