@@ -7,6 +7,6 @@ function formatBloons(){
    else{
       formatNumber = false;
       document.getElementById("format").innerHTML = "Formated to Scientific!";
-      document.getElementById("bloonspersecond").innerHTML = numberformat.format(bloons, {format: 'scientific'}) 
+      document.getElementById("bloons").innerHTML = numberformat.format(bloons, {format: 'scientific'}) 
    }
 }
