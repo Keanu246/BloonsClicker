@@ -103,7 +103,7 @@ function buyDart() { //function for buying more Dart Monkeys
 		dartPrice = Math.ceil(50 * 1.1**dartTotal);
 		document.getElementById("dartMonkey").innerHTML = 'Buy a Dart Monkey for ' + dartPrice + ' Bloons';
 		document.getElementById("dartAmmount").innerHTML = 'You have ' + dartTotal + ' Dart Monkeys';
-		document.getElementById("dartProduce").innerHTML = 'Pops ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second';
+		document.getElementById("dartProduce").innerHTML = numberformat.format(dartBPS, 'Pops ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second');
 	}
 }
 
