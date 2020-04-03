@@ -66,6 +66,7 @@ function addBloons() { //function for clicking
 	bloons = bloons + clickStr;
 	//console.log(getCookie("bloons"))l;
 	document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
+	document.getElementById("bloons").innerHTML = numberformat.format(bloons, totalBPS, clickCost);
 }
 
 function buyDart() { //function for buying more Dart Monkeys
@@ -190,12 +191,6 @@ window.setInterval(function() { //Adds together all the Bloons and then updates 
 window.setInterval(function() {
 	document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
 }, refreshRateVar);
-
-window.setInterval(function() {
-	document.getElementById("bloons").innerHTML = numberformat.format(bloons);
-	document.getElementById("bloonspersecond").innerHTML = numberformat.format(totalBPS);
-});
-
 
 /*
 ----This section represents the Upgrades page of the javascript----
