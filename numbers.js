@@ -1,12 +1,12 @@
 function formatBloons(){
    if(formatNumber){
-      formatNumber = true;
-      document.getElementById("format").innerHTML = "Formated to Normal!";
-      document.getElementById("bloons").innerHTML = numberformat.format(bloons);
+      formatNumber = false;
+      document.getElementById("format").innerHTML = "Format";
+      document.getElementById("bloons").innerHTML = numberformat.format(bloons, {format: 'scientific'})
    }
    else{
-      formatNumber = false;
-      document.getElementById("format").innerHTML = "Formated to Scientific!";
-      document.getElementById("bloons").innerHTML = numberformat.format(bloons, {format: 'scientific'}) 
+      formatNumber = true;
+      document.getElementById("format").innerHTML = "Formated!";
+      document.getElementById("bloons").innerHTML = numberformat.format(bloons);
    }
 }
