@@ -12,3 +12,12 @@ function formatBloons(){
       document.getElementById("bloons").innerHTML = numberformat.format(bloons);
    }
 }
+
+function formatValue(){
+   if(formatNumber){
+      document.getElementById("bloons").innerHTML = numberformat.format(bloons, {format: 'scientific'})
+   }
+   else{
+      document.getElementById("bloons").innerHTML = numberformat.format(bloons);
+   }
+}
