@@ -20,6 +20,7 @@ function openTab(evt, pageName){
 var totalBPS = 0;
 var bloons = 0;
 var bloonstext = document.getElementById("bloons");
+var formatbloons = numberformat.format(bloons);
 var clickStr = 1;
 var clickCost = 10;
 var refreshRateVar = 100;
@@ -189,6 +190,10 @@ window.setInterval(function() { //Adds together all the Bloons and then updates 
 window.setInterval(function() {
 	document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
 }, refreshRateVar);
+
+window.setInterval(function() {
+	document.getElementById("bloons").innerHTML = numberformat.format(bloons);
+});
 
 
 /*
