@@ -56,7 +56,8 @@ var tripledartsUpgrade = false;
 var spikeopultUpgrade = false;
 var crossbowUpgrade = false;
 var tackpowerUpgrade = false;
-var tackpower2Upgrade = false
+var tackpower2Upgrade = false;
+var formatNumber = false
 
 
 function loadDarts() { //updates the HTML elements related to Dart Monkey affter loading
