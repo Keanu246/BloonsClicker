@@ -103,7 +103,7 @@ function buyDart() { //function for buying more Dart Monkeys
 		dartPrice = Math.ceil(50 * 1.1**dartTotal);
 		document.getElementById("dartMonkey").innerHTML = 'Buy a Dart Monkey for ' + dartPrice + ' Bloons';
 		document.getElementById("dartAmmount").innerHTML = 'You have ' + dartTotal + ' Dart Monkeys';
-		document.getElementById("dartProduce").innerHTML = numberformat.format(dartBPS, 'Pops ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second');
+		document.getElementById("dartProduce").innerHTML = numberformat.format(dartBPS, dartPrice);
 	}
 }
 
@@ -114,7 +114,7 @@ function buyTack() { //Function for buying more Tack Shooters
 		tackPrice = Math.ceil(250 * 1.30**tackTotal);
 		document.getElementById("tackShooter").innerHTML = 'Buy a Tack Shooter for ' + tackPrice + ' Bloons';
 		document.getElementById("tackAmmount").innerHTML = 'You have ' + tackTotal + ' Tack Shooters';
-		document.getElementById("tackProduce").innerHTML = 'Pops ' + (tackBPS * tackTotal).toFixed(1) + ' bloons per second';
+		document.getElementById("tackProduce").innerHTML = numberformat.format(tackBPS, tackPrice);
 	}
 }
 
@@ -125,7 +125,7 @@ function buySniper() {
 		sniperPrice = Math.ceil(1000 * 1.27**sniperTotal);
 		document.getElementById("sniperMonkey").innerHTML = 'Buy a Sniper Monkey for ' + sniperPrice + ' Bloons';
 		document.getElementById("sniperAmmount").innerHTML = 'You have ' + sniperTotal + ' Sniper Monkeys';
-		document.getElementById("sniperProduce").innerHTML = 'Pops ' + (sniperBPS * sniperTotal).toFixed(1) + ' bloons per second';
+		document.getElementById("sniperProduce").innerHTML = numberformat.format(sniperBPS, sniperPrice);
 	}
 }
 
@@ -136,7 +136,7 @@ function buyBoomerang() {
 		boomerangPrice = Math.ceil(10000 * 1.25**boomerangTotal);
 		document.getElementById("boomerangMonkey").innerHTML = 'Buy a Boomerang Thrower for ' + boomerangPrice + ' Bloons';
 		document.getElementById("boomerangAmmount").innerHTML = 'You have ' + boomerangTotal + ' Boomerang Throwers';
-		document.getElementById("boomerangProduce").innerHTML = 'Pops ' + (boomerangBPS * boomerangTotal).toFixed(1) + ' bloons per second';
+		document.getElementById("boomerangProduce").innerHTML = numberformat.format(boomerangBPS, boomerangPrice);
 	}
 }
 
@@ -147,7 +147,7 @@ function buyBomb() {
 		bombPrice = Math.ceil(100000 * 1.22**bombTotal);
 		document.getElementById("bombShooter").innerHTML = 'Buy a Bomb Tower for ' + bombPrice + ' Bloons';
 		document.getElementById("bombAmmount").innerHTML = 'You have ' + bombTotal + ' Bomb Towers';
-		document.getElementById("bombProduce").innerHTML = 'Pops ' + (bombBPS * bombTotal).toFixed(1) + ' bloons per second';
+		document.getElementById("bombProduce").innerHTML = numberformat.format(bombBPS, bombPrice);
 	}
 }
 
@@ -158,7 +158,7 @@ function buyGlue() {
 		gluePrice = Math.ceil(1000000 * 1.20**glueTotal);
 		document.getElementById("glueGunner").innerHTML = 'Buy an Glue Gunner for ' + gluePrice + ' Bloons';
 		document.getElementById("glueAmmount").innerHTML = 'You have ' + glueTotal + ' Glue Gunners';
-		document.getElementById("glueProduce").innerHTML = 'Pops ' + (glueBPS * glueTotal).toFixed(1) + ' bloons per second';
+		document.getElementById("glueProduce").innerHTML = numberformat.format(glueBPS, gluePrice);
 	}
 }
 
@@ -166,10 +166,10 @@ function buyIce() {
 	if(bloons >= icePrice) {
 		bloons = bloons - icePrice;
 		iceTotal = iceTotal + 1;
-		icePrice = Math.ceil(15000000 * 1.20**iceTotal);
+		icePrice = Math.ceil(15000000 * 1.19**iceTotal);
 		document.getElementById("iceMonkey").innerHTML = 'Buy an Ice Monkey for ' + icePrice + ' Bloons';
 		document.getElementById("iceAmmount").innerHTML = 'You have ' + iceTotal + ' Ice Monkeys';
-		document.getElementById("iceProduce").innerHTML = 'Pops ' + (iceBPS * iceTotal).toFixed(1) + ' bloons per second';
+		document.getElementById("iceProduce").innerHTML = numberformat.format(iceBPS, icePrice);
 	}
 }
 
@@ -177,10 +177,10 @@ function buyNinja() {
 	if(bloons >= ninjaPrice) {
 		bloons = bloons - ninjaPrice;
 		ninjaTotal = ninjaTotal + 1;
-		ninjaPrice = Math.ceil(250000000 * 1.19**ninjaTotal);
+		ninjaPrice = Math.ceil(250000000 * 1.18**ninjaTotal);
 		document.getElementById("ninjaMonkey").innerHTML = 'Buy a Ninja Monkey for ' + ninjaPrice + ' Bloons';
 		document.getElementById("ninjaAmmount").innerHTML = 'You have ' + ninjaTotal + ' Ninja Monkeys';
-		document.getElementById("ninjaProduce").innerHTML = 'Pops ' + (ninjaBPS * ninjaTotal).toFixed(1) + ' bloons per second';
+		document.getElementById("ninjaProduce").innerHTML = numberformat.format(ninjaBPS, ninjaPrice);
 	}
 }
 
@@ -188,10 +188,10 @@ function buyWizard() {
 	if(bloons >= wizardPrice) {
 		bloons = bloons - wizardPrice;
 		wizardTotal = wizardTotal + 1;
-		wizardPrice = Math.ceil(5000000000 * 1.18**wizardTotal);
+		wizardPrice = Math.ceil(5000000000 * 1.16**wizardTotal);
 		document.getElementById("wizardMonkey").innerHTML = 'Buy a Monkey Apprentice for ' + wizardPrice + ' Bloons';
 		document.getElementById("wizardAmmount").innerHTML = 'You have ' + wizardTotal + ' Monkey Apprentices';
-		document.getElementById("wizardProduce").innerHTML = 'Pops ' + (wizardBPS * wizardTotal).toFixed(1) + ' bloons per second';
+		document.getElementById("wizardProduce").innerHTML = numberformat.format(wizardBPS, wizardPrice);
 	}
 }
 
