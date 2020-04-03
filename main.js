@@ -341,7 +341,6 @@ function clickHarder() { // Upgrade click ability
 		clickCost = clickCost * 1.5;
 		localStorage.setItem("clickStr", clickStr); localStorage.setItem("clickCost", clickCost);
 		document.getElementById("clickCostDisplay").innerHTML = "Current level: " + clickStr.toFixed(1) + " Cost for next level: " + clickCost.toFixed(1);
-		document.getElementById("clickCostDisplay").innerHTML = numberformat.format(clickCost)
 	}
 }
 
