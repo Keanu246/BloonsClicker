@@ -1,3 +1,5 @@
+var formatNumber = false
+
 function formatBloons(){
    if(formatNumber){
       formatNumber = false;
