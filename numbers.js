@@ -1,7 +1,7 @@
 var formatBloons = function () {
     document.getElementById("bloons").innerHTML = numberformat.format(bloons);
     document.getElementById("bloonspersecond").innerHTML = numberformat.format(totalBPS);
-    document.getElementById("clickCostDisplay").innerHTML = numberformat.format(clickCostDisplay);
+    document.getElementById("clickCostDisplay").innerHTML = numberformat.format(clickCost);
     document.getElementById("dartMonkey").innerHTML = numberformat.format(dartPrice);
     document.getElementById("dartProduce").innerHTML = numberformat.format(dartBPS);
     document.getElementById("tackShooter").innerHTML = numberformat.format(tackPrice);
