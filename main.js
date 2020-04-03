@@ -76,7 +76,6 @@ function buyDart() { //function for buying more Dart Monkeys
 		document.getElementById("dartMonkey").innerHTML = 'Buy a Dart Monkey for ' + dartPrice + ' Bloons';
 		document.getElementById("dartAmmount").innerHTML = 'You have ' + dartTotal + ' Dart Monkeys';
 		document.getElementById("dartProduce").innerHTML = 'Pops ' + (dartBPS * dartTotal).toFixed(1) + ' bloons per second';
-		document.getElementById("bloons").innerHTML = numberformat.format(dartPrice);
 	}
 }
 
@@ -88,7 +87,6 @@ function buyTack() { //Function for buying more Tack Shooters
 		document.getElementById("tackShooter").innerHTML = 'Buy a Tack Shooter for ' + tackPrice + ' Bloons';
 		document.getElementById("tackAmmount").innerHTML = 'You have ' + tackTotal + ' Tack Shooters';
 		document.getElementById("tackProduce").innerHTML = 'Pops ' + (tackBPS * tackTotal).toFixed(1) + ' bloons per second';
-		document.getElementById("bloons").innerHTML = numberformat.format(tackPrice);
 	}
 }
 
@@ -100,7 +98,6 @@ function buySniper() {
 		document.getElementById("sniperMonkey").innerHTML = 'Buy a Sniper Monkey for ' + sniperPrice + ' Bloons';
 		document.getElementById("sniperAmmount").innerHTML = 'You have ' + sniperTotal + ' Sniper Monkeys';
 		document.getElementById("sniperProduce").innerHTML = 'Pops ' + (sniperBPS * sniperTotal).toFixed(1) + ' bloons per second';
-		document.getElementById("bloons").innerHTML = numberformat.format(sniperPrice);
 	}
 }
 
@@ -112,7 +109,6 @@ function buyBoomerang() {
 		document.getElementById("boomerangMonkey").innerHTML = 'Buy a Boomerang Thrower for ' + boomerangPrice + ' Bloons';
 		document.getElementById("boomerangAmmount").innerHTML = 'You have ' + boomerangTotal + ' Boomerang Throwers';
 		document.getElementById("boomerangProduce").innerHTML = 'Pops ' + (boomerangBPS * boomerangTotal).toFixed(1) + ' bloons per second';
-		document.getElementById("bloons").innerHTML = numberformat.format(boomerangPrice);
 	}
 }
 
