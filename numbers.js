@@ -5,6 +5,7 @@ function formatValue(){
    if(formatBloons){
       formatNumber = false;
       document.getElementById("format").innerHTML = "Format!";
+      document.getElementById("bloons").innerHTML = numberformat.format(bloons,{format: 'scientific'})
    }
    else{
       formatNumber = true;
