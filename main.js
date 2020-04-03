@@ -20,6 +20,7 @@ function openTab(evt, pageName){
 var totalBPS = 0;
 var bloons = 0;
 var bloonstext = document.getElementById("bloons");
+var bloonsFormat = numberformat.format(bloons);
 var clickStr = 1;
 var clickCost = 10;
 var refreshRateVar = 100;
