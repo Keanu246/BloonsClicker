@@ -66,7 +66,7 @@ function addBloons() { //function for clicking
 	bloons = bloons + clickStr;
 	//console.log(getCookie("bloons"))l;
 	document.getElementById("bloons").innerHTML = bloons.toFixed(1) + ' Bloons';
-	document.getElementById("bloons").innerHTML = numberformat.format(bloons, totalBPS, clickCost);
+	document.getElementById("bloons").innerHTML = numberformat.format(bloons);
 }
 
 function buyDart() { //function for buying more Dart Monkeys
