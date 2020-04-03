@@ -1,4 +1,4 @@
-var formatBloons = function (numberformat) {
+function formatBloons() {
     document.getElementById("bloons").innerHTML = numberformat.format(bloons);
     document.getElementById("bloonspersecond").innerHTML = numberformat.format(totalBPS);
     document.getElementById("clickCostDisplay").innerHTML = numberformat.format(clickCost);
